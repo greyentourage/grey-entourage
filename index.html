@@ -17,7 +17,9 @@
         <span class="heart"></span>
         <section class="content-left">
             <div class="inner">
-                <h1 class="logo"><img src="assets/logo.svg" alt="" /></h1>
+                <header>
+                    <h1 class="logo"><img src="assets/logo.svg" alt="" /></h1>
+                </header>
                 <hr>
                 <p class="tagline">Digital mindset business development agency</p>
                 <h2>Why?</h2>
@@ -26,6 +28,7 @@
                 <p class="intro">Working. Together.</p>
                 <p>Cause it’s not about brief from your side and solution from our. That takes too much time and we are already late by working that way.</p>
                 <p>Instead, we seek to understand where you want to take your business and help you get there by implementing our creative/data/technology knowledge.</p>
+                <small class="copyright left">copyright Grey Group &amp; Entourage, 2015.</small>
             </div>
         </section>
 
@@ -132,9 +135,9 @@
                         <p>Or drop us a visit at</b><br /><a href="https://goo.gl/maps/dhwLS" target="_blank">Strojarska 20, 10000 Zagreb, Croatia</a></p>
                     </div>
                 </div>
+                <small class="copyright right">copyright Grey Group &amp; Entourage, 2015.</small>
             </div>
         </section>
-        
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
@@ -147,16 +150,15 @@
                     $("body").toggleClass("animation"); 
                 });
             });
-        </script>
+        
+            // google analytics
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-53584710-1', 'auto');
-          ga('send', 'pageview');
+            ga('create', 'UA-53584710-1', 'auto');
+            ga('send', 'pageview');
 
         </script>
     </body>

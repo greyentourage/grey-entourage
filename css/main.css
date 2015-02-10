@@ -141,6 +141,24 @@ b { font-weight:700; }
     color:#fff;
 }
 
+.copyright.left {
+    font-size:1.4rem;
+    color:#444;
+}
+.copyright.right { display:none; }
+.copyright.left:before,
+.copyright.right:before {
+    content:'';
+    display:block;
+    width:8rem;
+    margin:5rem 0;
+    border-top:1px solid #575756;
+}
+.copyright.right:before {
+    margin:6rem auto 2rem auto;
+    border-top:1px solid #ccc;
+}
+
 
 /* --------------------------
     right
@@ -242,6 +260,7 @@ p.highlighted,
 /* --------------------------
     animation
 -------------------------- */
+/*
 @media only screen and (min-width:800px) {
     
     body:after {
@@ -391,6 +410,7 @@ p.highlighted,
     .start .content-right .inner { opacity:1; }
 
 }
+*/
 
 
 /* --------------------------
@@ -457,6 +477,15 @@ p.highlighted,
         position:relative;
         margin-bottom:4rem;
         padding-left:0;
+    }
+    
+    .copyright.left { display:none; }
+    .copyright.right {
+        display:block;
+        margin-top:2rem;
+        text-align:center;
+        font-size:1.2rem;
+        color:#666;
     }
     
 }
