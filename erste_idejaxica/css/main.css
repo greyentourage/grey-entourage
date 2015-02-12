@@ -284,7 +284,6 @@ b { font-weight:bold; }
 .social-feed {
     overflow:hidden;
     position:relative;
-    right:5px;
     max-width:116rem;
     min-height:80rem;
     margin:0 auto 8rem 0;
@@ -304,6 +303,18 @@ b { font-weight:bold; }
     background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(241,248,253,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(241,248,253,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f8fd', GradientType=0 );
+}
+.social-feed iframe {
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+    width:-webkit-calc(100% + 15px);
+    height:100%;
+    z-index:99;   
 }
 
 /* carousel */
