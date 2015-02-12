@@ -285,7 +285,7 @@ b { font-weight:bold; }
     overflow:hidden;
     position:relative;
     max-width:116rem;
-    min-height:80rem;
+    min-height:160rem;
     margin:0 auto 8rem 0;
 }
 .social-feed:after {
