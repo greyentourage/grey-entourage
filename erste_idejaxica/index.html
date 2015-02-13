@@ -70,6 +70,7 @@
         <main role="main" class="page-content inner">
             
             <div class="social-feed">
+                <span class="feed-tooltip">Scrollajte za više sadržaja</span>
                 <iframe src="https://walls.io/test-wall"></iframe>
             </div>
             
@@ -133,6 +134,11 @@
                 
                 $(".btn-close").click(function() {
                     $(this).parents(".info-slide").fadeOut(); 
+                });
+                
+                $(".feed-tooltip").delay(2500).fadeIn(500);
+                $(".social-feed").hover(function() {
+                    $(".feed-tooltip").delay(2500).fadeOut(700);
                 });
                 
                 $("#owl-example").owlCarousel({
