@@ -233,9 +233,15 @@ p.highlighted,
 }
 .contact-info a {
     position:relative;
+<<<<<<< HEAD
     display:inline-block;
     color:#d6331e;
     text-decoration:none;
+=======
+    max-width:116rem;
+    min-height:80rem;
+    margin:0 auto 8rem 0;
+>>>>>>> parent of 09618e1... ...
 }
 .contact-info a:after {
     content:'';
