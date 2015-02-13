@@ -200,7 +200,10 @@ b { font-weight:bold; }
     background:url(../assets/header-img-bottom.png) no-repeat 50% 0;  
 }
 
-.info-btns li { position:absolute; }
+.info-btns li {
+    z-index:100;
+    position:absolute;
+}
 
 .info-btns li:nth-child(1) {
     top:22.5rem;
