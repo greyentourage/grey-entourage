@@ -248,8 +248,9 @@ a.btn:hover {
     display:inline-block;
     width:4rem;
     height:4rem;
+    padding-top:2rem;
     border-radius:100%;
-    font:bold 3.2rem/4rem Arial, sans-serif;
+    font:bold 3.2rem/0 Arial, sans-serif;
     text-align:center;
     text-shadow:none;
     color:#fff;
@@ -503,7 +504,8 @@ a.btn:hover {
         width:3rem;
         height:3rem;
         top:.4rem;
-        font:bold 2.6rem/3rem Arial, sans-serif;
+        padding-top:1.5rem;
+        font-size:2.6rem;
     }
     
     .carousel .btn { margin-top:2rem; }
@@ -548,7 +550,8 @@ a.btn:hover {
         left:0;
         width:4rem;
         height:4rem;
-        font:bold 3.2rem/4rem Arial, sans-serif;
+        padding-top:2rem;
+        font-size:3.2rem;
     }
     
     .info-slide { min-height:100vh; }
