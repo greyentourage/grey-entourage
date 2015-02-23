@@ -331,7 +331,7 @@ a.btn:hover {
     position:relative;
     max-width:116rem;
     min-height:160rem;
-    margin:0 auto 8rem 0;
+    margin:0 auto 8rem auto;
     overflow-y:auto; 
     -webkit-overflow-scrolling:touch;
 }
@@ -570,6 +570,7 @@ a.btn:hover {
     .btn-close:before { display:inline-block; }
     
     .social-feed:after { height:10rem; }
+    .social-feed { margin-bottom:4rem; }
 
 }
 
@@ -595,6 +596,7 @@ a.btn:hover {
     .copyright-info a { margin-top:1rem; }
     
     .social-feed:after { height:8rem; }
+    .social-feed { margin-bottom:2rem; }
     
 }
 
@@ -602,6 +604,7 @@ a.btn:hover {
 @media only screen and (max-width:620px) {
     
     .social-feed:after { height:4rem; }
+    .social-feed { margin-bottom:0; }
     
     .carousel-txt {
         float:none;
