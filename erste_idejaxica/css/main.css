@@ -332,7 +332,6 @@ a.btn:hover {
     max-width:116rem;
     min-height:160rem;
     margin:0 auto 8rem 0;
-    overflow-y:auto; 
     -webkit-overflow-scrolling:touch;
 }
 .social-feed:after {
