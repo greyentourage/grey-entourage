@@ -554,10 +554,12 @@ a.btn:hover {
     .info-slide .inner { padding-top:12rem; }
     .info-slide .info-txt { width:100%; }
     .btn-close {
+        float:left;
         top:4rem;
-        right:0;
+        right:auto;
         left:3rem;
         txt-align:left;
+        border:1px solid red;
     }
     .btn-close:after { display:none; }
     .btn-close:before { display:inline-block; }
