@@ -332,8 +332,10 @@ a.btn:hover {
     max-width:116rem;
     min-height:160rem;
     margin:0 auto 8rem 0;
+    overflow-y:auto; 
     -webkit-overflow-scrolling:touch;
 }
+.no-touch .social-feed { overflow:hidden; }
 .social-feed:after {
     content:'';
     z-index:100;
@@ -375,7 +377,7 @@ a.btn:hover {
 }
 
 .social-feed iframe {
-    overflow:hidden;
+    overflow:auto;
     position:absolute;
     top:2rem;
     left:0;
@@ -386,8 +388,8 @@ a.btn:hover {
     z-index:99;   
 }
 .no-touch .social-feed iframe {
-    width:-webkit-calc(100% + 18px);
-    width:calc(100% + 18px);
+    width:-webkit-calc(100% + 17px);
+    width:calc(100% + 17px);
 }
 
 /* carousel */
