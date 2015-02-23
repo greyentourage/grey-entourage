@@ -3,6 +3,11 @@
 *	v1.3.3
 */
 
+.owl-wrapper-outer {
+    max-width:90rem;
+    margin:0 auto;
+}
+
 .owl-theme .owl-controls {
     margin-top:4rem;
 	text-align:center;
