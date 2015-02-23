@@ -241,14 +241,14 @@ a.btn:hover {
 }
     
 .info-btns button:before {
-    content:'+';
+    content:url(../assets/ico-plus.svg);
     position:absolute;
     top:.2rem;
     right:0;
     display:inline-block;
     width:4rem;
     height:4rem;
-    padding-top:2rem;
+    padding:1.1rem;
     border-radius:100%;
     font:bold 3.2rem/0 Arial, sans-serif;
     text-align:center;
@@ -476,11 +476,6 @@ a.btn:hover {
     
     .info-txt { width:50%; }
     
-    .info-btns:before {
-        width:10rem;
-        height:9rem;
-        right:12.5rem;
-    }
     .info-btns:after {
         width:30rem;
         height:12rem;
@@ -507,8 +502,7 @@ a.btn:hover {
         width:3rem;
         height:3rem;
         top:.4rem;
-        padding-top:1.5rem;
-        font-size:2.6rem;
+        padding:.85rem;
     }
     
     .carousel .btn { margin-top:2rem; }
@@ -553,8 +547,7 @@ a.btn:hover {
         left:0;
         width:4rem;
         height:4rem;
-        padding-top:2rem;
-        font-size:3.2rem;
+        padding:1.1rem;
     }
     
     .info-slide { min-height:100vh; }
