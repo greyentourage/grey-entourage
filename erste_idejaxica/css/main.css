@@ -555,7 +555,7 @@ a.btn:hover {
     .info-slide .info-txt { width:100%; }
     .btn-close {
         top:4rem;
-        right:auto;
+        right:0;
         left:3rem;
         txt-align:left;
     }
