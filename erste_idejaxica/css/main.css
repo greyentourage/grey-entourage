@@ -394,7 +394,6 @@ a.btn:hover {
 
 /* carousel */
 .carousel {
-    padding:6rem 2rem 0 2rem;
     border-top:1px solid #f9fcfe;
     box-shadow:0 -1px 0 #cce2f2;
 }
@@ -403,6 +402,7 @@ a.btn:hover {
     max-width:90rem;
     margin:0 auto;
 }
+.owl-item { padding:6rem 2rem 0 2rem; }
 .carousel-txt {
     float:left;
     width:70%;
@@ -604,7 +604,6 @@ a.btn:hover {
 @media only screen and (max-width:620px) {
     
     .social-feed:after { height:4rem; }
-    .social-feed { margin-bottom:0; }
     
     .carousel-txt {
         float:none;
