@@ -219,19 +219,30 @@ button { outline:0; }
 .popup {
     display:none;
     z-index:1000;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.popup:after {
+    content:"";
+    display:block;
+    z-index:-1;
     position:fixed;
     top:0;
     bottom:0;
     left:0;
     right:0;
     background-color:#fff;
-    border:5rem solid rgba(0,0,0,.01);
 }
-.clients .inner {
+.popup-inner {
     position:absolute;
     top:50%;
     left:50%;
-    max-width:60rem;
+    padding:4rem;
+    width:100%;
+    max-width:80rem;
     text-align:center;
     color:#666;
     -webkit-transform:translate(-50%,-50%);
@@ -527,6 +538,7 @@ p.highlighted,
     h2 { margin-top:3.2rem; }
     p { font-size:1.6rem; }
     
+    
 }
 
 @media only screen and (max-width:800px) {
@@ -584,6 +596,13 @@ p.highlighted,
     .navigation li {
         width:18%;
         padding:0 1rem;
+    }
+    
+    .popup-inner {
+        top:0;
+        -webkit-transform:translate(-50%,0);
+        -ms-transform:translate(-50%,0);
+        transform:translate(-50%,0);
     }
     
 }
