@@ -25,13 +25,13 @@
 
     </head>
     <body>
-        <span class="heart"></span>
-        <section class="content-left">
+        <button class="heart"><span>Clients</span></button>
+        <section class="content-left about-us">
             <div class="inner">
                 <header>
                     <h1 class="logo"><img src="assets/logo.svg" alt="" /></h1>
                 </header>
-                <hr>
+                <hr />
                 <p class="tagline">Digital mindset business development agency</p>
                 <h2>Why?</h2>
                 <p>Because we live and do business in everchanging environment. It’s not about responding to trends, it’s recognizing where it is all going and getting there first.</p>
@@ -42,8 +42,27 @@
                 <small class="copyright left">copyright Grey Group &amp; Entourage, 2015.</small>
             </div>
         </section>
+        
+        <section class="popup clients">
+            <div class="inner">
+                <button class="close-popup">Close</button>
+                <p>Collaboratively supply functionalized strategic theme areas with state of the art resources.</p>
+                <hr />
+                <ul class="client-list">
+                    <li><img src="content/logo-vip.png" alt="" /></li>
+                    <li><img src="content/logo-microsoft.png" alt="" /></li>
+                    <li><img src="content/logo-tomato.png" alt="" /></li>
+                    <li><img src="content/logo-istra.png" alt="" /></li>
+                    <li><img src="content/logo-bipa.png" alt="" /></li>
+                    <li><img src="content/logo-dreamies.png" alt="" /></li>
+                    <li><img src="content/logo-erste.png" alt="" /></li>
+                    <li><img src="content/logo-bayer.png" alt="" /></li>
+                    <li><img src="content/logo-allianz.png" alt="" /></li>
+                </ul>
+            </div>
+        </section>
 
-        <section class="content-right">
+        <section class="content-right contact">
             <img src="assets/greyentourage-photos.jpg" alt="" class="photo" />
             <div class="inner">
                 <nav class="navigation">
@@ -159,6 +178,13 @@
                 
                 $(".logo, .heart").hover(function() {
                     $("body").toggleClass("animation"); 
+                });
+                
+                $(".heart").click(function() {
+                    $(".clients").fadeIn();
+                });
+                $(".close-popup").click(function() {
+                    $(".popup").fadeOut(); 
                 });
             });
         
