@@ -69,6 +69,108 @@ body:before {
     background-color:#444;
 }
 
+
+/* --------------------------
+    general
+-------------------------- */
+hr {
+    display:block;
+    width:8rem;
+    margin:5rem 0;
+    border-top:1px solid #575756;
+}
+
+h1 {
+    margin-bottom:4.2rem;
+    text-transform:uppercase;
+    font-size:4.2rem;
+    line-height:1;
+    font-weight:900;
+    color:#fff;
+}
+h2 {
+    margin-top:4.8rem;
+    text-transform:uppercase;
+    font-size:2.8rem;
+    font-weight:900;
+    color:#d6331e;
+}
+p,
+ul,
+ol {
+    margin-bottom:2.4rem;
+    font-size:2rem;
+    line-height:1.2;
+}
+ol { padding-left:2.5rem; }
+li { margin-bottom:1.2rem; }
+ul li {
+    position:relative;
+    padding-left:1.5rem;
+}
+ul li:before {
+    content:"";
+    position:absolute;
+    top:1.6rem;
+    left:0;
+    display:inline-block;
+    width:1rem;
+    height:.2rem;
+    background-color:#d6331e;
+}
+
+b { font-weight:700; }
+
+a {
+    position:relative;
+    display:inline-block;
+    color:#d6331e;
+    text-decoration:none;
+}
+a:after {
+    content:'';
+    display:block;
+    width:100%;
+    height:.1rem;
+    background:transparent;
+    transition:all .3s ease;
+    -webkit-transform:scale(0,0);
+    -ms-transform:scale(0,0);
+    transform:scale(0,0);
+}
+a:hover:after {
+    background:#d6331e;
+    -webkit-transform:scale(1,1);
+    -ms-transform:scale(1,1);
+    transform:scale(1,1);
+    transform-origin:50% 0;
+}
+
+.btn {
+    top:0;
+    display:inline-block;
+    padding:1rem 4rem;
+    font-size:3.2rem;
+    font-weight:900;
+    text-transform:uppercase;
+    text-align:center;
+    color:#fff;
+    background-color:#d6331e;
+    border-bottom:2px solid #ad2513;
+    border-radius:4px;
+    transition:.1s ease;
+}
+.btn:after { display:none; }
+.btn:hover {
+    border-bottom-color:#8b190a;
+    background-color:#ad2513;
+}
+.btn:active { top:2px; }
+
+
+/* --------------------------
+    left
+-------------------------- */
 .content-left {
     z-index:10;
     position:relative;
@@ -106,26 +208,8 @@ body:before {
 }
 
 .logo { width:20rem; }
-
-hr {
-    display:block;
-    width:8rem;
-    margin:5rem 0;
-    border-top:1px solid #575756;
-}
-
-h2 {
-    margin-top:4.8rem;
-    text-transform:uppercase;
-    font-size:2.8rem;
-    font-weight:900;
-    color:#d6331e;
-}
-p {
-    margin-bottom:1.2rem;
-    font-size:2rem;
-}
-b { font-weight:700; }
+.logo a { display:block; }
+.logo a:after { display:none; }
 
 .tagline {
     margin-bottom:3.2rem;
@@ -199,12 +283,14 @@ b { font-weight:700; }
     width:15%;
     padding:0 1rem;
 }
+.navigation li:before { display:none; }
 .navigation a {
     display:block;
     max-width:100%;
     max-height:100%;
     transition:all .3s ease;
 }
+.navigation a:after { display:none; }
 .navigation a:hover { transform:scale(1.1,1.1); }
 .navigation a * {
     fill:#d6331e;
@@ -231,29 +317,36 @@ p.highlighted,
     font-weight:200;
     color:#444;
 }
-.contact-info a {
-    position:relative;
-    display:inline-block;
-    color:#d6331e;
-    text-decoration:none;
+
+
+/* --------------------------
+    text pages (job application...)
+-------------------------- */
+.container {
+    margin:0 auto;
+    padding:8rem 4rem;
+    background:rgba(22,22,22,.75);
 }
-.contact-info a:after {
-    content:'';
-    display:block;
-    width:100%;
-    height:.1rem;
-    background:transparent;
-    transition:all .3s ease;
-    -webkit-transform:scale(0,0);
-    -ms-transform:scale(0,0);
-    transform:scale(0,0);
+
+.bigger-txt { font-size:2.4rem; }
+
+.job-task {
+    margin:5rem 0;
+    padding:2rem 3rem 1rem 3rem;
+    color:#fff;
+    background-color:#d6331e;
+    border-radius:10px;
 }
-.contact-info a:hover:after {
-    background:#d6331e;
-    -webkit-transform:scale(1,1);
-    -ms-transform:scale(1,1);
-    transform:scale(1,1);
-    transform-origin:50% 0;
+.job-task h2 {
+    margin:0;
+    color:#fff;   
+}
+
+.end-date {
+    margin-top:4rem;
+    font-size:2.4rem;
+    font-weight:900;
+    color:#fff;   
 }
 
 
@@ -433,8 +526,11 @@ p.highlighted,
     hr { margin:4rem 0; }
     .tagline { font-size:3.2rem; }
     .intro { font-size:2rem; }
+    
+    h1 { font-size:3.2rem; }
     h2 { margin-top:3.2rem; }
-    p { font-size:1.6rem; }
+    p, ul, ol { font-size:1.6rem; }
+    .bigger-txt { font-size:2rem; }
     
 }
 
@@ -489,6 +585,8 @@ p.highlighted,
 }
 
 @media only screen and (max-width:600px) {
+    
+    .container { padding:4rem; }
 
     .navigation li {
         width:18%;
