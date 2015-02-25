@@ -110,8 +110,9 @@ ul li {
 }
 ul li:before {
     content:"";
+    float:left;
     position:absolute;
-    top:1.6rem;
+    top:1.7rem;
     left:0;
     display:inline-block;
     width:1rem;
