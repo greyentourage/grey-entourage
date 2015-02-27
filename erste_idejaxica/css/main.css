@@ -362,7 +362,7 @@ a.btn:hover {
     overflow:hidden;
     position:relative;
     max-width:116rem;
-    min-height:100rem;
+    min-height:150rem;
     margin:0 auto 8rem auto;
     overflow-y:auto; 
     -webkit-overflow-scrolling:touch;
