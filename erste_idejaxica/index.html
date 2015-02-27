@@ -19,8 +19,9 @@
             <div class="inner"> 
                 <a href="http://www.bankarenje.hr/" class="header-logo"><img src="assets/logo.svg" alt="" /></a>
                 <div class="info-txt">
-                    <p>Sve vezano uz bankarenje kao da je uniformirano u čudnovati i komplicirani bankarski rječnik od kojeg nas zaboli glava. Zato postoji <strong>Bankarenje bez kravate</strong>.</p>
+                    <p>Sve vezano uz bankarenje kao da je uniformirano u čudnovati i komplicirani bankarski rječnik od kojeg nas zaboli glava. Zato postoji <b>Bankarenje bez kravate</b>.</p>
                     <p>Ideja je jednostavna - osnovne bankarske proizvode i usluge objasniti na način kako bi to frend objasnio frendu u studentskoj menzi ili cura dečku na prvom dejtu. Bankarenje je upravo postalo iznenađujuće zabavno.</p>
+                    <button class="info-msg-link btn-4">Važna obavijest za IdejaXica natjecatelje</button>
                 </div>
 
                 <ul class="info-btns">
@@ -28,6 +29,18 @@
                     <li><button class="btn-2">Što je<br /> IdejaXica?</button></li>
                     <li><button class="btn-3">Kako da se<br /> i ja uključim?</button></li>
                 </ul>
+            </div>
+            
+            <div class="info-slide slide-4">
+                <div class="inner">
+                    <button class="btn-close">Zatvori</button>
+                    <div class="info-txt">
+                        <h1>Važna obavijest za IdejaXica natjecatelje</h1>
+                        <p>Dragi natjecatelji, došlo je do jedne promjene u pravilima – za objavljivanje kreativnih sadržaja neće se koristiti Facebook. Umjesto Facebook-a bit će potrebno koristiti <b>YouTube</b>. Duljina videa nije zadana, ali preporučamo da se ne prelazi 2 minute, a može biti i puno manje. :)</p>
+                    <p>Instagram i Twitter ćete koristiti u skladu s već objavljenim pravilima.<br /></b>I ne zaboravite na hashtag <b>#BankarenjeBezKravate</b>.</p>
+                    <p>Sretno! :)</p>
+                    </div>
+                </div>
             </div>
             
             <div class="info-slide slide-1">
@@ -46,7 +59,7 @@
                     <button class="btn-close">Zatvori</button>
                     <div class="info-txt">
                         <h1>Što je IdejaXica?</h1>
-                        <p>Kao što je umirovljenički pokaz namijenjen umirovljenicima, kravata poslovnjacima, a hrana za mačke... mačkama, tako je <strong>IdejaXica namijenjena kreativnim studentima</strong>.</p>
+                        <p>Kao što je umirovljenički pokaz namijenjen umirovljenicima, kravata poslovnjacima, a hrana za mačke... mačkama, tako je <b>IdejaXica namijenjena kreativnim studentima</b>.</p>
                         <p>To ti je zapravo natjecanje koje organizira središnji festival marketinških komunikacija u Hrvatskoj – <b>Dani komunikacija</b>.</p>
                         <p>Ove godine timovi prijavljenih studenata imaju zadatak na što kreativniji način &ldquo;skinuti kravatu s bankarenja&rdquo;, koristeći ono što najbolje znaju - digitalne alate. A naj-tim koji preda rješenje &ldquo;like a boss&rdquo;, <b>osvaja 10.000 kn poklon bon</b> u <a href="http://www.sancta-domenica.hr/" target="_blank">Sancta Domenica Brand Store trgovini</a>. Nije loše, zar ne?</p>
                     </div>
@@ -68,7 +81,7 @@
         <main role="main" class="page-content inner">
             
             <section class="social-feed">
-                <iframe src="//walls.io/bankarenjebezkravate"></iframe>
+                <iframe allowTransparency="true" src="//walls.io/bankarenjebezkravate"></iframe>
             </section>
             
             <section class="carousel">
@@ -129,6 +142,7 @@
                 openSlide(".btn-1", ".slide-1");
                 openSlide(".btn-2", ".slide-2");
                 openSlide(".btn-3", ".slide-3");
+                openSlide(".btn-4", ".slide-4");
                 
                 $(".btn-close").click(function() {
                     $(this).parents(".info-slide").fadeOut(); 
