@@ -209,7 +209,7 @@ a.btn:hover {
 .info-txt {
     z-index:2;
     position:relative;
-    width:50%;
+    width:52%;
 }
 
 /* ---- slide info ---- */
@@ -310,7 +310,7 @@ a.btn:hover {
     right:0;
     display:none;
     width:100%;
-    min-height:42rem;
+    min-height:40rem;
     background-color:#eff7fd;
     border-bottom:1px solid #cce2f2;
     box-shadow:0 1px 0 #fbfdfe;
@@ -362,7 +362,7 @@ a.btn:hover {
     overflow:hidden;
     position:relative;
     max-width:116rem;
-    min-height:160rem;
+    min-height:100rem;
     margin:0 auto 8rem auto;
     overflow-y:auto; 
     -webkit-overflow-scrolling:touch;
@@ -398,8 +398,8 @@ a.btn:hover {
     background:transparent;
 }
 .no-touch .social-feed iframe {
-    width:-webkit-calc(100% + 17px);
-    width:calc(100% + 17px);
+    width:-webkit-calc(100% + 20px);
+    width:calc(100% + 20px);
 }
 
 /* carousel */
