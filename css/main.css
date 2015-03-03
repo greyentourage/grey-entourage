@@ -60,15 +60,13 @@ body:before {
     background-color:#444;
 }
 
-
-/* --------------------------
-    general
--------------------------- */
 hr {
     display:block;
     width:8rem;
+    height:0;
     margin:5rem 0;
-    border-top:1px solid #575756;
+    border:none;
+    border-top:1px solid #575757;
 }
 
 h1 {
@@ -111,6 +109,7 @@ ul li:before {
     background-color:#d6331e;
 }
 
+strong,
 b { font-weight:700; }
 
 a {
@@ -138,6 +137,7 @@ a:hover:after {
     transform-origin:50% 0;
 }
 
+button { outline:0; }
 .btn {
     top:0;
     display:inline-block;
@@ -200,65 +200,8 @@ a:hover:after {
 }
 
 .logo { width:20rem; }
-<<<<<<< HEAD
 .logo a { display:block; }
 .logo a:after { display:none; }
-=======
-
-hr {
-    display:block;
-    width:8rem;
-    height:0;
-    margin:5rem 0;
-    border:none;
-    border-top:1px solid #575757;
-}
-
-h2 {
-    margin-top:4.8rem;
-    text-transform:uppercase;
-    font-size:2.8rem;
-    font-weight:900;
-    color:#d6331e;
-}
-p {
-    margin-bottom:1.2rem;
-    font-size:2rem;
-}
-strong,
-b { font-weight:700; }
->>>>>>> popis-klijenata
-
-a {
-    position:relative;
-    display:inline-block;
-    color:#d6331e;
-    text-decoration:none;
-}
-a:after {
-    content:'';
-    display:block;
-    width:100%;
-    height:.1rem;
-    background:transparent;
-    transition:all .3s ease;
-    -webkit-transform:scale(0,0);
-    -ms-transform:scale(0,0);
-    transform:scale(0,0);
-}
-a:hover:after {
-    background:#d6331e;
-    -webkit-transform:scale(1,1);
-    -ms-transform:scale(1,1);
-    transform:scale(1,1);
-    transform-origin:50% 0;
-}
-
-button { outline:0; }
-
-.btn {
-    
-}
 
 
 /* ---- about us txt ---- */
@@ -378,12 +321,6 @@ button { outline:0; }
 }
 .open .popup-inner { opacity:1; }
 
-.clients-contact-txt {
-    opacity:0;
-    transition:opacity 2s 3s;
-}
-.open .clients-contact-txt { opacity:1; }
-
 .close-popup {
     cursor:pointer;
     margin-bottom:4rem;
@@ -406,7 +343,7 @@ button { outline:0; }
 }
 
 .clients hr {
-    margin:5rem auto;
+    margin:5rem auto 2.5rem auto;
     border-top-color:#999;
 }
 
@@ -419,6 +356,7 @@ button { outline:0; }
     transform-origin:50% 50%;
     transition:.6s;
 }
+.client-list li:before { display:none; }
 
 .open .client-list li:nth-child(1) { transition:.6s 2s; }
 .open .client-list li:nth-child(2) { transition:.6s 2.1s; }
@@ -433,6 +371,17 @@ button { outline:0; }
 .open .client-list li {
     opacity:1;
     transform:scale(1,1);
+}
+
+.clients-contact-txt {
+    opacity:0;
+    transition:opacity 2s 3s;
+}
+.open .clients-contact-txt { opacity:1; }
+.clients-contact-txt .btn {
+    margin-top:2rem;
+    padding:.8rem 1.5rem;
+    font-size:2rem;
 }
 
 
@@ -529,7 +478,6 @@ p.highlighted,
     font-weight:200;
     color:#444;
 }
-<<<<<<< HEAD
 
 
 /* --------------------------
@@ -561,8 +509,6 @@ p.highlighted,
     font-weight:900;
     color:#fff;   
 }
-=======
->>>>>>> popis-klijenata
 
 
 /* --------------------------
@@ -740,7 +686,6 @@ p.highlighted,
     p, ul, ol { font-size:1.6rem; }
     .bigger-txt { font-size:2rem; }
     
-    
 }
 
 @media only screen and (max-width:800px) {
@@ -765,7 +710,6 @@ p.highlighted,
         font-size:1.2rem;   
     }
 
-    
     .content-left {
         float:none;
         width:100%;
