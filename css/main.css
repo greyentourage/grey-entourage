@@ -32,9 +32,9 @@ fieldset {
 textarea { resize:vertical; }
 
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* --------------------------
+    general
+-------------------------- */
 * {
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -148,6 +148,11 @@ a:hover:after {
 
 button { outline:0; }
 
+.btn {
+    
+}
+
+
 /* ---- about us txt ---- */
 .tagline {
     margin-bottom:3.2rem;
@@ -181,7 +186,7 @@ button { outline:0; }
 }
 .heart span {
     position:absolute;
-    bottom:-38px;
+    bottom:-47px;
     left:50%;
     margin-left:-3.5rem;
     display:inline-block;
@@ -207,6 +212,7 @@ button { outline:0; }
 	border-width:8px;
 	margin-left:-8px;
 }
+
 
 /* ---- client list ---- */
 .popup {
