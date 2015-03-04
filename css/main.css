@@ -154,7 +154,7 @@ button { outline:0; }
     transition:.3s ease;
 }
 .btn:after,
-.btn:hover:after{
+.btn:hover:after {
     display:none;
     width:auto;
     height:auto;
@@ -176,6 +176,7 @@ button { outline:0; }
     color:#d6331e;
     background-color:transparent;
 }
+.btn-thin:active { top:0; }
 
 .pages-nav {
     overflow:hidden;
