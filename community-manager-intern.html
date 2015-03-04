@@ -29,6 +29,7 @@
                 width:70%;
             }
             .navigation li {
+                float:right;
                 width:6rem;
                 padding:0 0 0 1rem;
             }
@@ -41,15 +42,24 @@
                     margin-bottom:2rem;
                 }
                 .navigation {
-                    float:none;
+                    float:left;
                     width:100%;
                     text-align:left;
                     padding-top:0;
                 }  
                 .navigation li {
+                    float:left;
                     width:5rem;
                     padding:0 1.2rem 0 0;
                 }
+                .pages-nav { padding:2rem 0; }
+                .pages-nav .btn { float:left; }
+            }
+            
+            @media only screen and (max-width:440px) {
+                
+                .pages-nav .btn:after { display:none; }
+                
             }
         </style>
         
@@ -157,6 +167,9 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="pages-nav">
+                    <a href="#" class="btn btn-thin">Idući oglas: Screen designer</a>
+                </div>
             </header>
             <main role="main">
                 <article>
