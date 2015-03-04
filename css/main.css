@@ -503,6 +503,36 @@ p.highlighted,
     margin:0;
     color:#fff;   
 }
+.job-task h2 + p {
+    margin-top:.5rem;
+    font-size:2rem;
+    font-style:italic;
+}
+.job-task h3 {
+    font-size:2.4rem;
+    font-weight:900;   
+}
+.job-task p { font-size:1.8rem; }
+.job-task a {
+    margin:1.5rem 0;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#fff;
+    text-decoration:underline;
+}
+.job-task a:before {
+    content:"";
+    position:relative;
+    top:.2rem;
+    display:inline-block;
+    width:1.8rem;
+    height:1.8rem;
+    margin-right:1rem;
+    background:url(../assets/ico-download.svg) no-repeat 50% 50%;
+    background-size:cover;
+}
+.job-task a:hover { text-decoration:none; }
+.job-task a:after { display:none; }
 
 .end-date {
     margin-top:4rem;
