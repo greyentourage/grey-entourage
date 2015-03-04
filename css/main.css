@@ -548,7 +548,6 @@ p.highlighted,
 .job-task h2 + p {
     margin-top:.5rem;
     font-size:2rem;
-    font-style:italic;
 }
 .job-task h3 {
     font-size:2.4rem;
