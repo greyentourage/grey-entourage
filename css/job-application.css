@@ -22,7 +22,24 @@ header {
 .navigation:after { display:none; }
 .navigation a * { fill:#fff; }
 
+.job-image {
+    position:relative;
+    padding:8px;
+    border:1px solid #252525;
+}
+.job-image figcaption {
+    position:absolute;
+    bottom:4rem;
+    left:8px;
+    margin-right:8px;
+    padding:1rem 1.5rem 1.2rem 1.5rem;
+    font-size:2rem;
+    color:#fff;
+    background-color:rgba(0,0,0,.75);
+}
+
 @media only screen and (max-width:800px) {
+    
     .logo {
         float:none;
         margin-bottom:2rem;
@@ -40,6 +57,24 @@ header {
     }
     .pages-nav { padding:2rem 0; }
     .pages-nav .btn { float:left; }
+    
+    .job-image figcaption {
+        bottom:2rem;
+        padding:.7rem 1rem .9rem 1rem;
+        font-size:1.4rem;
+    }
+    
+}
+
+@media only screen and (max-width:600px) {
+    
+    .job-image figcaption {
+        position:relative;
+        bottom:auto;
+        left:auto;
+        background-color:transparent;
+    }
+    
 }
 
 @media only screen and (max-width:440px) {
