@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AWT</title>
+        <script src="js/jquery.min.js.js"></script>
+        <script>
+            $(function() {
+                $(".webshop-trigger").click(function() {
+                    $(".webshop-dropdown").fadeToggle(400); 
+                });
+                
+                $(".year-trigger").click(function() {
+                    $(this).toggleClass("open"); 
+                    $(".year-popup").toggleClass("open"); 
+                });
+                
+                $(".year-close").click(function() {
+                     $(".year-popup").removeClass("open"); 
+                    $(".year-trigger").removeClass("open"); 
+                });
+                
+            });
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body id="home">
+        <div class="header">
+            <div class="inner">
+                <span class="webshop-trigger"></span> 
+            </div>
+        </div>
+        <div class="webshop-dropdown">
+            <div class="inner">
+                <span class="webshop-hover"></span> 
+            </div>
+        </div>
+        
+        <div class="homepage-content">
+            <div class="inner">
+                <span class="category-hover"></span>
+                <div class="year">
+                    <span class="year-trigger"></span>
+                    <div class="year-popup">
+                        <span class="year-close"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="inner"></div>
+        </div>
+    </body>
+</html>
