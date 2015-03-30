@@ -161,7 +161,7 @@ p {
 
     
 /* ---------- main ---------- */
-.main { margin:10vh 0; }
+.main { margin:4rem 0; }
 .copy-txt {
     overflow:hidden;
     min-height:18rem;
@@ -182,6 +182,12 @@ p {
 /* ----------------------------
     media queries
 ---------------------------- */
+@media only screen and (max-height:760px) {
+
+    .main { margin:0; }
+    
+}
+
 @media only screen and (max-width:1000px) {
     
     .counter { font-size:8rem; }
