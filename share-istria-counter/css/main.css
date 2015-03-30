@@ -184,7 +184,7 @@ p {
 ---------------------------- */
 @media only screen and (max-height:760px) {
 
-    .main { margin:0; }
+    .main { margin-top:0; }
     
 }
 
