@@ -8,10 +8,10 @@ var defaultOptions = {
   },
   render: function (date) {
     this.el.innerHTML = // date.years + " years, " +
-                        "<b>" + date.days  + "</b>days <b>" +
-                        this.leadingZeros(date.hours) + "</b>h <b>" +
-                        this.leadingZeros(date.min) + "</b>min" 
-                        // + this.leadingZeros(date.sec) + " sec";
+                        // "<b>" + date.days  + "</b>days <b>" +
+                        "<b>" + this.leadingZeros(date.hours) + "</b>h <b>" +
+                        this.leadingZeros(date.min) + "</b>min <b>" 
+                        + this.leadingZeros(date.sec) + "</b>sec";
   }
 };
 
