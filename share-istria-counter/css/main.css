@@ -100,7 +100,7 @@ body {
 
 .inner {
     max-width:100rem;
-    padding:0 4rem 4rem 4rem;
+    padding:0 4rem 6rem 4rem;
     margin:0 auto;
 }
 
@@ -201,7 +201,7 @@ p {
 
 @media only screen and (max-width:640px) {
     
-    .inner { padding:0 2rem 2rem 2rem; }
+    .inner { padding:0 2rem 6rem 2rem; }
     h2 { font-size:6rem; }
     p { font-size:2rem }
     .counter { font-size:6rem; }
