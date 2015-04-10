@@ -118,7 +118,10 @@ ol li {
 }
 
 a,
-a:visited { color:#009fe2; }
+a:visited {
+    outline:none;
+    color:#009fe2;
+}
 a:hover,
 a:active { text-decoration:none; }
 
