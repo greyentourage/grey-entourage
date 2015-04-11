@@ -100,6 +100,7 @@ body {
 .page-content,
 .candidates-list,
 .page-footer {
+    display:block;
     max-width:117rem;
     margin:0 auto;
 }
@@ -145,9 +146,13 @@ img { max-width:100%; }
     padding:12rem 0 1rem 0;
     background:url(../assets/bg-header.jpg) no-repeat 50% 100%;
     background-size:cover;
+    -webkit-transform:skew(0deg, -1.5deg);
+    -ms-transform:skew(0deg, -1.5deg);
     transform:skew(0deg, -1.5deg);
 }
 .page-header .inner {
+    -webkit-transform:skew(0deg, 1.5deg);
+    -ms-transform:skew(0deg, 1.5deg);
     transform:skew(0deg, 1.5deg);
 }
 
@@ -157,6 +162,8 @@ img { max-width:100%; }
     transition:.3s;
 }
 .logo:hover {
+    -webkit-transform:scale(1.1,1.1);
+    -ms-transform:scale(1.1,1.1);
     transform:scale(1.1,1.1);
 }
 
@@ -182,16 +189,16 @@ img { max-width:100%; }
    content
    ========================================================================== */
 .main-copy {
+    min-height:16rem;
     margin:0 8rem 10rem 8rem;
     padding-right:20rem;
     background:url(../assets/ico-support-candidate.svg) no-repeat 100% 0;
+    background-size:16rem 16rem;
 }
 
 
 /* ========== candidates ========== */
-.candidates {
-    margin-bottom:10rem;
-}
+.candidates { margin-bottom:10rem; }
 
 .list-tools {
     float:left;
@@ -237,12 +244,8 @@ img { max-width:100%; }
 
 
 /* ----- search ----- */
-.search {
-    float:right;
-}
-.search label {
-    margin:0 0 1rem 2rem;
-}
+.search { float:right; }
+.search label { margin:0 0 1rem 2rem; }
 .search input[type=text] {
     float:left;
     width:25rem;
@@ -350,7 +353,6 @@ img { max-width:100%; }
     background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
     background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
     border-radius:8px;
     transition:.3s;
 }
@@ -418,6 +420,8 @@ img { max-width:100%; }
 .btn-vote:hover:after {
     background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
+    -webkit-transform:scale(1.2,1.2) rotate(90deg);
+    -ms-transform:scale(1.2,1.2) rotate(90deg);
     transform:scale(1.2,1.2) rotate(90deg);
 }
 .vote-disabled,
@@ -430,6 +434,8 @@ img { max-width:100%; }
 .vote-disabled:hover:after {
     background:#bbb url(../assets/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
+    -webkit-transform:scale(1,1) rotate(0);
+    -ms-transform:scale(1,1) rotate(0);
     transform:scale(1,1) rotate(0);
 }
 .vote-counter {
