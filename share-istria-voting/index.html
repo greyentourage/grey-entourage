@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,20 +7,34 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="css/magnific-popup.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="js/jquery.magnific-popup.js"></script>
-        <script src="js/main.js"></script>
         <script>
             $(document).ready(function() {
+                // person details popup
                 $('.page-link').magnificPopup({
-                    type:'iframe',
+                    type:'ajax',
                     overflowY: 'auto'
                 });
+                
+                if($(window).width() <= 960) {
+                    $('.country-filter ul').each(function() {
+                        var $select = $('<select />');
+                        $(this).find('a').each(function() {
+                            var $option = $('<option />');
+                            $option.attr('value', $(this).attr('href')).html($(this).html());
+                            $select.append($option);
+                        });
+
+                        $(this).replaceWith($select);
+                    });   
+                }
             });
         </script>
     </head>
@@ -90,16 +104,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-2.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Gregory Bell</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Gregory Bell</a></h2>
                                 <span class="person-country">Italy</span>
                                 <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>62652</b></span>
@@ -110,16 +124,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-3.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Robin Shaw</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Robin Shaw</a></h2>
                                 <span class="person-country">Germany</span>
                                 <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>48549</b></span>
@@ -130,16 +144,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-4.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Charlotte Mitchell</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Charlotte Mitchell</a></h2>
                                 <span class="person-country">UK</span>
                                 <p>Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>47149</b></span>
@@ -150,16 +164,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-5.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Martin Mitchelle</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Martin Mitchelle</a></h2>
                                 <span class="person-country">Germany</span>
                                 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>35167</b></span>
@@ -170,16 +184,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-6.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Charlie Parker</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Charlie Parker</a></h2>
                                 <span class="person-country">Italy</span>
                                 <p>Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>25429</b></span>
@@ -190,16 +204,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-7.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Emily Ellis je Emily Ellis i tako...</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Emily Ellis je Emily Ellis i tako...</a></h2>
                                 <span class="person-country">Netherlands</span>
                                 <p>Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>10598</b></span>
@@ -210,16 +224,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-8.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Mae Richardson</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Mae Richardson</a></h2>
                                 <span class="person-country">Netherlands</span>
                                 <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>9854</b></span>
@@ -230,16 +244,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Emma Loppez</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Emma Loppez</a></h2>
                                 <span class="person-country">USA</span>
                                 <p>Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>63821</b></span>
@@ -250,16 +264,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-2.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Gregory Bell</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Gregory Bell</a></h2>
                                 <span class="person-country">Italy</span>
                                 <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>62652</b></span>
@@ -270,16 +284,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-3.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Robin Shaw</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Robin Shaw</a></h2>
                                 <span class="person-country">Germany</span>
                                 <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>48549</b></span>
@@ -290,16 +304,16 @@
                     <li>
                         <article class="person">
                             <div class="person-pic">
-                                <a href="#">
+                                <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-4.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
                             <div class="short-info">
-                                <h2><a href="#">Charlotte Mitchell</a></h2>
+                                <h2><a href="candidate.html" class="page-link">Charlotte Mitchell</a></h2>
                                 <span class="person-country">UK</span>
                                 <p>Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-                                <a href="#" class="link-more-info">Read more</a>
+                                <a href="candidate.html" class="link-more-info page-link">Read more</a>
                             </div>
                             <div class="voting">
                                 <span class="vote-counter">Votes <b>47149</b></span>

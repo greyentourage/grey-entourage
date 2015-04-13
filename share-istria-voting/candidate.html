@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,25 +7,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="css/magnific-popup.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="//cdn.rawgit.com/noelboss/featherlight/1.2.3/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+        <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <script src="js/main.js"></script>
     </head>
     <body>
-        
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff459c65ec9fb55" async="async"></script>
-        
-        
+  
     <header role="banner" class="page-header">
         <div class="inner">
             <a href="index.html" class="logo"><img src="assets/logo-shareIstria.svg" alt="" /></a>
             <nav role="navigation" class="main-nav">
                 <ul>
+                    <li><a href="index.html" class="highlighted">See all candidates</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
@@ -52,11 +49,7 @@
                     <button class="btn-vote">Vote</button>
                 </div>
 
-                <div class="share-btns">
-                    <span>Share</span>
-                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                    <div class="addthis_sharing_toolbox"></div>
-                </div>
+                <button class="btn-share-big">Share</button>
             </div>
             <div class="right-column">
                 <h2>Why me</h2>
@@ -64,20 +57,20 @@
                 <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
                 <div class="points-calculator">
                     <h2>Points calculator</h2>
-                    <ul class="stats">
+                    <ul>
                         <li>
                             <b>Overall social points</b>
-                            <span>106 361</span>
-                            <span>1 391</span>
+                            <i class="number">106 361</i>
+                            <i class="points">1 391 <span>points</span></i>
                         </li>
                         <li>
                             <b>Current votes</b>
-                            <span>3 821</span>
-                            <span>93</span>
+                            <i class="number">3 821</i>
+                            <i class="points">93 <span>points</span></i>
                         </li>
-                        <li>
+                        <li class="overall">
                             <b>Overall</b>
-                            <span>3 186</span>
+                            <i class="points">3 186 <span>points</span></i>
                         </li>
                     </ul>
                 </div>
