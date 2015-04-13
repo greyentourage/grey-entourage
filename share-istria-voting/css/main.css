@@ -96,11 +96,11 @@ body {
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
 }
+main { display:block; }
 .inner,
 .page-content,
 .candidates-list,
 .page-footer {
-    display:block;
     max-width:117rem;
     margin:0 auto;
 }
@@ -146,24 +146,19 @@ img { max-width:100%; }
     padding:12rem 0 1rem 0;
     background:url(../assets/bg-header.jpg) no-repeat 50% 100%;
     background-size:cover;
-    -webkit-transform:skew(0deg, -1.5deg);
-    -ms-transform:skew(0deg, -1.5deg);
     transform:skew(0deg, -1.5deg);
 }
 .page-header .inner {
-    -webkit-transform:skew(0deg, 1.5deg);
-    -ms-transform:skew(0deg, 1.5deg);
     transform:skew(0deg, 1.5deg);
 }
 
 .logo {
     display:inline-block;
     width:18rem;
+    height:10rem;
     transition:.3s;
 }
 .logo:hover {
-    -webkit-transform:scale(1.1,1.1);
-    -ms-transform:scale(1.1,1.1);
     transform:scale(1.1,1.1);
 }
 
@@ -189,16 +184,18 @@ img { max-width:100%; }
    content
    ========================================================================== */
 .main-copy {
-    min-height:16rem;
+    min-height:17rem;
     margin:0 8rem 10rem 8rem;
     padding-right:20rem;
     background:url(../assets/ico-support-candidate.svg) no-repeat 100% 0;
-    background-size:16rem 16rem;
+    background-size:17rem 17rem;
 }
 
 
 /* ========== candidates ========== */
-.candidates { margin-bottom:10rem; }
+.candidates {
+    margin-bottom:10rem;
+}
 
 .list-tools {
     float:left;
@@ -244,8 +241,12 @@ img { max-width:100%; }
 
 
 /* ----- search ----- */
-.search { float:right; }
-.search label { margin:0 0 1rem 2rem; }
+.search {
+    float:right;
+}
+.search label {
+    margin:0 0 1rem 2rem;
+}
 .search input[type=text] {
     float:left;
     width:25rem;
@@ -341,7 +342,7 @@ img { max-width:100%; }
 }
 
 /* short info */
-.person-info {
+.short-info {
     position:relative;
     height:34rem;
     margin:-8rem 0 2rem 0;
@@ -353,24 +354,25 @@ img { max-width:100%; }
     background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
     background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
     border-radius:8px;
     transition:.3s;
 }
-.person:hover .person-info { box-shadow:0 10px 30px rgba(0,0,0,.3); }
-.person-info h2 { font:2.6rem/1.2 'WhitneyBlack', Calibri, Arial, sans-serif; }
+.person:hover .short-info { box-shadow:0 10px 30px rgba(0,0,0,.3); }
+.short-info h2 { font:2.6rem/1.2 'WhitneyBlack', Calibri, Arial, sans-serif; }
 .person-country {
     display:block;
     margin-bottom:2rem;
     text-transform:uppercase;
     font-size:1.5rem;
 }
-.person-info a {
+.short-info a {
     text-decoration:none;
     color:#fff;
     transition:color .2s;
 }
-.person-info a:hover { color:#009fe2; }
-.person-info p {
+.short-info a:hover { color:#009fe2; }
+.short-info p {
     overflow:hidden;
     height:12rem;
     margin-bottom:2rem;   
@@ -420,8 +422,6 @@ img { max-width:100%; }
 .btn-vote:hover:after {
     background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
-    -webkit-transform:scale(1.2,1.2) rotate(90deg);
-    -ms-transform:scale(1.2,1.2) rotate(90deg);
     transform:scale(1.2,1.2) rotate(90deg);
 }
 .vote-disabled,
@@ -434,8 +434,6 @@ img { max-width:100%; }
 .vote-disabled:hover:after {
     background:#bbb url(../assets/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
-    -webkit-transform:scale(1,1) rotate(0);
-    -ms-transform:scale(1,1) rotate(0);
     transform:scale(1,1) rotate(0);
 }
 .vote-counter {
@@ -508,6 +506,119 @@ img { max-width:100%; }
 
 
 /* ==========================================================================
+   person details
+   ========================================================================== */
+.person-details {
+    margin-bottom:10rem;
+    padding:4rem 4rem 8rem 4rem;
+    color:#222;
+    background-color:#fff;
+    background-color:rgba(255,255,255,.9);
+    transform:skew(0deg, -1.5deg);
+}
+.person-details > div { transform:skew(0deg, 1.5deg); }
+.person-details:before,
+.person-details:after {
+    content:"";
+    display:table;
+}
+.person-details:after  { clear:both; }
+.person-details .left-column {
+    float:left;
+    width:20%;
+}
+.person-details .right-column {
+    float:right;
+    width:80%;
+    padding-left:6rem;
+}
+
+.person-id {
+    float:left;
+    width:100%;
+    margin-bottom:4rem; 
+}
+.person-id .picture {
+    margin-top:-8rem;
+    text-align:center;
+}
+.person-id img {
+    display:inline-block;
+    max-width:17rem;
+    border:6px solid rgba(255,2552,255,.5);
+    border-radius:100%;
+    box-shadow:0 2px 2px rgba(0,0,0,.2);
+}
+.person-id h1 {
+    margin:0;
+    font-size:5.2rem;
+    color:#009fe2;
+}
+.person-id .person-country {
+    font-size:2.4rem;
+    color:#333;
+}
+    
+.long-info { clear:both; }
+.person-details h2 {
+    margin-bottom:2rem;
+    font:3.2rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    color:#333;
+}
+.person-details p {
+    margin-bottom:2rem;
+    font-size:2rem;
+}
+
+.points-calculator {
+    margin-top:6rem;
+}
+
+
+.person-details .voting { text-align:center; }
+.person-details .vote-counter {
+    display:block;
+    margin-bottom:1rem;
+    font-size:1.8rem;
+}
+.person-details .vote-counter b { font-size:2.8rem; }
+.person-details .btn-vote {
+    float:none;
+    width:100%;
+    margin-bottom:6rem;
+    font-size:3.2rem;
+}
+.person-details .btn-vote:after {
+    content:"";
+    float:right;
+    display:inline-block;
+    width:3.5rem;
+    height:3.5rem;
+    margin-left:1rem;
+    border-radius:100%;
+    background:#6cc733 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background-size:1.4rem;
+    transition:.2s;
+}
+.person-details .btn-vote:hover:after {
+    background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background-size:1.4rem;
+    transform:scale(1.2,1.2) rotate(90deg);
+}
+
+.share-btns {
+    text-align:center;
+}
+.share-btns > span {
+    text-transform:uppercase;
+    font-size:1.6rem;
+}
+.share-btns li {
+    display:inline-block;
+}
+
+
+/* ==========================================================================
    footer
    ========================================================================== */
 .page-footer {
@@ -551,11 +662,15 @@ a.powered-by {
     text-decoration:none;
     color:#fff;
 }
-a.powered-by small {
+.powered-by small {
     display:block;
     margin-bottom:.5rem;
     opacity:.3;
     font-size:1.8rem;
+}
+.powered-by img {
+    width:28rem;
+    height:3.8rem;
 }
 
 
