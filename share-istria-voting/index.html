@@ -20,10 +20,15 @@
                 // person details popup
                 $('.page-link').magnificPopup({
                     type:'ajax',
-                    overflowY: 'auto'
+                    overflowY: 'auto',
+                    closeOnContentClick: false,
+                    closeOnBgClick: false,
+                    closeBtnInside: true
                 });
                 
+                // unordered list filter menu > select on mobile
                 if($(window).width() <= 960) {
+                    $('.country-filter ul').wrap('<div></div>');
                     $('.country-filter ul').each(function() {
                         var $select = $('<select />');
                         $(this).find('a').each(function() {
@@ -325,14 +330,14 @@
                 
                 <footer class="list-pagination">
                     <ul>
-                        <li><a href="#" rel="prev" class="prev">Back</a></li>
+                        <li class="prev"><a href="#" rel="prev">Back</a></li>
                         <li><a href="#">1</a></li>
                         <li><a href="#" class="active">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li><a href="#">6</a></li>
-                        <li><a href="#" rel="next" class="next">Next</a></li>
+                        <li class="next"><a href="#" rel="next">Next</a></li>
                     </ul>
                 </footer>
             </section>
