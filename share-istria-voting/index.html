@@ -30,7 +30,7 @@
                 });
                 
                 // unordered list filter menu > select on mobile
-                if (jQuery(window).width() < 960) {
+                if ($(window).width() < 960) {
                     $('.country-filter ul').wrap('<div></div>');
                     $('.country-filter ul').each(function() {
                         var $select = $('<select />');
