@@ -348,7 +348,7 @@ img { max-width:100%; }
     clear:both;
     overflow:hidden;
 }
-.list li {
+.list > li {
     float:left;
     width:25%;
     padding:0 1.5rem 8rem 1.5rem;
@@ -373,6 +373,8 @@ img { max-width:100%; }
     border-radius:100%;
     box-shadow:0 2px 2px rgba(0,0,0,.2);
 }
+
+/* share */
 .btn-share {
     position:absolute;
     top:0;
@@ -388,10 +390,48 @@ img { max-width:100%; }
     white-space:nowrap;
     overflow:hidden;
 }
-.btn-share:hover {
-    background:#00a1e5 url(../assets/ico-share.svg) no-repeat 50% 50%;
-    background-size:2.4rem 2.4rem;
+
+.share-options-small {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    height:5.5rem;
+    padding:.75rem .5rem 0 .5rem;
+    text-align:center;
+    background:#fff;
+    border-radius:10rem;
 }
+.share-options-small li {
+    float:left;
+    margin:0;
+    padding:0 .4rem;
+}
+.share-options-small:hover,
+.btn-share:hover + .share-options-small { display:block; } 
+
+.ico-facebook,
+.ico-twitter,
+.ico-google-plus {
+    display:block;
+    width:4rem;
+    height:4rem;
+    background-size:cover;
+    text-indent:1000%;
+    white-space:nowrap;
+    overflow:hidden;
+    transition:.2s;
+}
+.ico-facebook:hover,
+.ico-twitter:hover,
+.ico-google-plus:hover {
+    -webkit-transform:scale(1.1,1.1);
+    -ms-transform:scale(1.1,1.1);
+    transform:scale(1.2,1.2);
+}
+.ico-facebook { background:url(../assets/ico-facebook.svg) no-repeat 50% 50%; }
+.ico-twitter { background:url(../assets/ico-twitter.svg) no-repeat 50% 50%; }
+.ico-google-plus { background:url(../assets/ico-google-plus.svg) no-repeat 50% 50%; }
 
 /* short info */
 .short-info {
