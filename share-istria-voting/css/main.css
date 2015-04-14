@@ -263,8 +263,8 @@ img { max-width:100%; }
     background:transparent;
     border:none;
     -webkit-appearance:none;
+    -moz-appearance:none;
     appearance:none;
-    -moz-appearance:window;
 }
 .country-filter select option { color:#2f2f2f; }
 .country-filter:after {
