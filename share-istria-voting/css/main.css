@@ -758,9 +758,7 @@ img { max-width:100%; }
     -ms-transform:skew(0deg, 1.5deg);
     transform:skew(0deg, 1.5deg);
 }
-.mfp-content .person-details {
-    margin-bottom:0;
-}
+.mfp-content .person-details { margin-bottom:0; }
 .mfp-content .person-details .mfp-close {
     opacity:1;
     position:abolute;
