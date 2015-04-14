@@ -234,29 +234,3 @@ p {
     
 }
 
-
-/* ----------------------------
-    animation
----------------------------- */
-.copy-txt {
-    opacity:0;
-    position:relative;
-    top:-10rem;
-    transition:all 2s ease .5s;
-}
-.start .copy-txt {
-    opacity:1;
-    top:0;
-}
-
-.counter {
-    opacity:0;
-    position:relative;
-    bottom:-10rem;
-    transition:all 1s ease 1.5s;
-}
-.start .counter {
-    opacity:1;
-    bottom:0;
-}
-
