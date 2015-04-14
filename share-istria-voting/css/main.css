@@ -441,7 +441,6 @@ img { max-width:100%; }
     text-transform:uppercase;
     font:1.8rem/2 'WhitneyBlack', Calibri, Arial, sans-serif;
 }
-
 /* vote button + counter */
 .voting {
     padding:0 .5rem;
@@ -457,7 +456,8 @@ img { max-width:100%; }
     border-radius:10rem;
     transition:.2s;
 }
-.btn-vote:hover { background-color:#009fe2; }
+.btn-vote:hover,
+.btn-vote:active { background-color:#009fe2; }
 .btn-vote:after {
     content:"";
     float:right;
