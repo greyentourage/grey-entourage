@@ -742,6 +742,7 @@ img { max-width:100%; }
     top:12vh;
     max-width:117rem;
     margin:0 0 2re 0;
+    background-color:#fff;
     box-shadow:0 5px 30px rgba(0,0,0,.75);
 }
 .mfp-content .person-details {

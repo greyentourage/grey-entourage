@@ -73,6 +73,7 @@
         margin-bottom:4rem;
         text-align:center;
     }
+    .footer-links li { margin-right:0; }
     a.powered-by {
         float:none;
         display:block;
