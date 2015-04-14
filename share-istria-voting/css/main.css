@@ -470,7 +470,8 @@ img { max-width:100%; }
     background-size:1.1rem;
     transition:.2s;
 }
-.btn-vote:hover:after {
+.btn-vote:hover:after,
+.btn-vote:active:after{
     background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
     -webkit-transform:scale(1.2,1.2) rotate(90deg);
