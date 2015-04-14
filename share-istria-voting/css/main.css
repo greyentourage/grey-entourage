@@ -266,6 +266,9 @@ img { max-width:100%; }
     appearance:none;
     -moz-appearance:window;
 }
+.country-filter select::-ms-expand {
+    display: none;
+}
 .country-filter select option { color:#2f2f2f; }
 .country-filter:after {
     content:"";
