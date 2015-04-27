@@ -462,10 +462,9 @@ img { max-width:100%; }
     text-align:center;
     background:rgba(255,255,255,.95);
     border-radius:10rem;
-    transition:.3s;
 }
 .btn-share:active + .share-options-small,
-.share-options-small:hover,
+.no-touch .share-options-small:hover,
 .share-options-small:active {
     opacity:1;
     display:block;
