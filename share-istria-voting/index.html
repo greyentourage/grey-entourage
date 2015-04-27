@@ -53,6 +53,11 @@
                       });
                     });
                 }
+                
+                $(".btn-share").click(function() {
+                    $(".share-options-small").fadeOut();
+                    $(this).siblings(".share-options-small").fadeToggle();
+                });
             });
           </script>
     </head>

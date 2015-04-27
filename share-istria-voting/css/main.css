@@ -454,6 +454,7 @@ img { max-width:100%; }
 
 .share-options-small {
     display:none;
+    z-index:100;
     position:absolute;
     top:0;
     left:0;
@@ -462,13 +463,6 @@ img { max-width:100%; }
     text-align:center;
     background:rgba(255,255,255,.95);
     border-radius:10rem;
-    border:1px solid red;
-}
-.btn-share:active + .share-options-small,
-.no-touch .share-options-small:hover,
-.share-options-small:active {
-    opacity:1;
-    display:block;
 }
 .share-options-small li {
     float:left;
