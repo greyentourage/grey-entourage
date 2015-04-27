@@ -1,3 +1,57 @@
+/* ==========================================================================
+   reset
+   ========================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
 html {
@@ -53,7 +107,7 @@ input,
 select,
 textarea {
     outline:none;
-    font-family:'WhitneyBook', Calibri, Arial, sans-serif;
+    font-family:'Whitney SSm A', 'Whitney SSm B', Calibri, Arial, sans-serif;
 }
 
 textarea {
@@ -68,32 +122,14 @@ textarea {
 }
 
 
+
 /* ==========================================================================
    general
    ========================================================================== */
-@font-face {
-  font-family: 'WhitneyBlack';
-  src: url('../assets/fonts/Whitney-Black-webfont.eot');
-  src: url('../assets/fonts/Whitney-Black-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../assets/fonts/Whitney-Black-webfont.woff2') format('woff2'),
-       url('../assets/fonts/Whitney-Black-webfont.woff') format('woff'),
-       url('../assets/fonts/Whitney-Black-webfont.ttf')  format('truetype'),
-       url('../assets/fonts/Whitney-Black-webfont.svg#svgFontName') format('svg');
-}
-@font-face {
-  font-family: 'WhitneyBook';
-  src: url('../assets/fonts/Whitney-Book-webfont.eot');
-  src: url('../assets/fonts/Whitney-Book-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../assets/fonts/Whitney-Book-webfont.woff2') format('woff2'),
-       url('../assets/fonts/Whitney-Book-webfont.woff') format('woff'),
-       url('../assets/fonts/Whitney-Book-webfont.ttf')  format('truetype'),
-       url('../assets/fonts/Whitney-Book-webfont.svg#svgFontName') format('svg');
-}
-
 body {
-    font:1rem/1.4 'WhitneyBook', Calibri, Arial, sans-serif;
+    font:400 1rem/1.4 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
     color:#fff;
-    background:url(../assets/bg-page.jpg) no-repeat 50% 0;
+    background:url(/static/voting/bg-page.jpg) no-repeat 50% 0 fixed;
     background-size:cover;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
@@ -109,15 +145,16 @@ main { display:block; }
 
 h1 {
     margin-bottom:2.4rem;
-    font:6rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 5.6rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 p {
-    font-size:2.4rem;
+    font-size:2.2rem;
 }
 ul li,
 ol li {
+    list-style:none;
     margin-bottom:1.2rem;
-    font-size:2.4rem;
+    font-size:2.2rem;
 }
 
 a,
@@ -146,7 +183,7 @@ img { max-width:100%; }
     width:100%;
     margin-bottom:0;
     padding:12rem 0 1rem 0;
-    background:url(../assets/bg-header.jpg) no-repeat 50% 100%;
+    background:url(/static/voting/bg-header.jpg) no-repeat 50% 100%;
     background-size:cover;
     -webkit-transform:skew(0deg, -1.5deg);
     -ms-transform:skew(0deg, -1.5deg);
@@ -178,7 +215,7 @@ img { max-width:100%; }
     display:inline-block;
     display:inline-block;
     text-transform:uppercase;
-    font:2.4rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 2.4rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 .main-nav li {
     display:inline-block;
@@ -200,9 +237,10 @@ img { max-width:100%; }
     min-height:17rem;
     margin:0 8rem 10rem 8rem;
     padding-right:20rem;
-    background:url(../assets/ico-support-candidate.svg) no-repeat 100% 0;
+    background:url(/static/voting/ico-support-candidate.svg) no-repeat 100% 0;
     background-size:17rem 17rem;
 }
+.main-copy b { font-weight:800; }
 
 
 /* ========== candidates ========== */
@@ -225,17 +263,17 @@ img { max-width:100%; }
 .search label {
     display:block;
     margin:0 0 1.5rem 1rem;
-    font:2.4rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 2.4rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 .country-filter li {
     display:inline-block;
-    margin:0 1rem 0 0;
+    margin:0 .5rem 0 0;
 }
 .country-filter a {
     display:inline-block;
     padding:.7rem 1rem;
     text-decoration:none;
-    font:1.8rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 1.7rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
     color:#fff;
     border-radius:10rem;
     border:2px solid rgba(255,255,255,.3);
@@ -258,13 +296,15 @@ img { max-width:100%; }
     width:25rem;
     height:4.5rem;
     padding:.5rem 2rem 1rem 2rem;
-    font:2rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 2rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
     color:#fff;
     background:transparent;
     border:none;
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
+    text-indent:0.01px;
+    text-overflow:'';
 }
 .country-filter select option { color:#2f2f2f; }
 .country-filter:after {
@@ -287,11 +327,12 @@ img { max-width:100%; }
     z-index:-1;
     position:absolute;
     top:0;
+    bottom:0;
     right:0;
     display:inline-block;
     width:4.5rem;
     height:100%;
-    background:#fff url(../assets/select-arrow.svg) no-repeat 45% 50%;
+    background:#fff url(/static/voting/select-arrow.svg) no-repeat 45% 50%;
     background-size:1.6rem 1rem;
 }
 
@@ -304,7 +345,7 @@ img { max-width:100%; }
     width:25rem;
     height:5rem;
     padding:0 2rem;
-    font-size:2rem;
+    font-size:1.8rem;
     line-height:1;
     border:2px solid #fff;
     border-radius:10rem;
@@ -325,7 +366,7 @@ img { max-width:100%; }
 }
 
 .search input[type="submit"] {
-    cursor:pointer;
+    cursor:default;
     float:left;
     display:inline-block;
     width:5rem;
@@ -333,14 +374,21 @@ img { max-width:100%; }
     margin-left:1rem;
     border-radius:100%;
     border:none;
-    background:#009fe2 url(../assets/ico-search.svg) no-repeat 50% 50%;
+    background:#009fe2 url(/static/voting/ico-search.svg) no-repeat 50% 50%;
     background-size:2.2rem;
     transition:.2s;
     text-indent:1000%;
     white-space:nowrap;
     overflow:hidden;
 }
-.search input[type="submit"]:hover { background-color:#3ac4ff; }
+
+#search-result-is-empty {
+    clear:both;
+    margin:4rem 2rem 8rem 2rem;
+    padding:2rem;
+    background-color:rgba(255,255,255,.1);
+    border-radius:8px;
+}
 
 
 /* ----- candidates list ----- */
@@ -363,15 +411,28 @@ img { max-width:100%; }
     z-index:10;
     position:relative;
     display:inline-block;
-    max-width:17rem;
+    width:16rem;
     margin-bottom:1rem;
 }
-.person-pic a { display:block; }
-.person-pic img {
+.person-pic > a {
+    overflow:hidden;
     display:block;
+    width:100%;
+    height:16rem;
+    font-size:1.2rem;
+    text-align:center;
+    background-color:rgba(255,255,255,.9);
     border:6px solid rgba(255,2552,255,.5);
     border-radius:100%;
     box-shadow:0 2px 2px rgba(0,0,0,.2);
+}
+.person-pic img {
+    display:inline-block;
+    position:relative;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
 }
 
 /* share */
@@ -383,7 +444,7 @@ img { max-width:100%; }
     height:5.5rem;
     border:2px solid #fff;
     border-radius:100%;
-    background:rgba(0,159,226,.75) url(../assets/ico-share.svg) no-repeat 50% 50%;
+    background:rgba(0,159,226,.75) url(/static/voting/ico-share.svg) no-repeat 50% 50%;
     background-size:2.4rem 2.4rem;
     transition:.2s;
     text-indent:1000%;
@@ -392,30 +453,37 @@ img { max-width:100%; }
 }
 
 .share-options-small {
-    display:none;
+    opacity:0;
+    display:block;
     position:absolute;
     top:0;
     left:0;
+    width:100%;
     height:5.5rem;
-    padding:.75rem .5rem 0 .5rem;
     text-align:center;
-    background:#fff;
+    background:rgba(255,255,255,.95);
     border-radius:10rem;
+    transition:.3s;
+}
+.share-options-small:hover,
+.share-options-small:active {
+    opacity:1;
 }
 .share-options-small li {
     float:left;
+    width:33.333333%;
+    height:5.5rem;
     margin:0;
-    padding:0 .4rem;
+    padding:.5rem;
 }
-.share-options-small:hover,
-.btn-share:hover + .share-options-small { display:block; } 
 
 .ico-facebook,
 .ico-twitter,
 .ico-google-plus {
+    opacity:1;
     display:block;
-    width:4rem;
-    height:4rem;
+    width:100%;
+    height:100%;
     background-size:cover;
     text-indent:1000%;
     white-space:nowrap;
@@ -424,14 +492,10 @@ img { max-width:100%; }
 }
 .ico-facebook:hover,
 .ico-twitter:hover,
-.ico-google-plus:hover {
-    -webkit-transform:scale(1.1,1.1);
-    -ms-transform:scale(1.1,1.1);
-    transform:scale(1.2,1.2);
-}
-.ico-facebook { background:url(../assets/ico-facebook.svg) no-repeat 50% 50%; }
-.ico-twitter { background:url(../assets/ico-twitter.svg) no-repeat 50% 50%; }
-.ico-google-plus { background:url(../assets/ico-google-plus.svg) no-repeat 50% 50%; }
+.ico-google-plus:hover { opacity:.75; }
+.ico-facebook { background:url(/static/voting/ico-facebook.svg) no-repeat 50% 50%; }
+.ico-twitter { background:url(/static/voting/ico-twitter.svg) no-repeat 50% 50%; }
+.ico-google-plus { background:url(/static/voting/ico-google-plus.svg) no-repeat 50% 50%; }
 
 /* short info */
 .short-info {
@@ -450,7 +514,7 @@ img { max-width:100%; }
     transition:.3s;
 }
 .person:hover .short-info { box-shadow:0 10px 30px rgba(0,0,0,.3); }
-.short-info h2 { font:2.6rem/1.2 'WhitneyBlack', Calibri, Arial, sans-serif; }
+.short-info h2 { font:800 2.4rem/1.2 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif; }
 .person-country {
     display:block;
     margin-bottom:2rem;
@@ -465,11 +529,17 @@ img { max-width:100%; }
 .short-info a:hover { color:#009fe2; }
 .short-info p {
     overflow:hidden;
-    height:12rem;
-    margin-bottom:2rem;   
+    height:9.2rem;
+    margin-bottom:2rem;
     text-align:left;
-    font-size:1.6rem;
+    font-size:1.5rem;
     line-height:1.2;
+    display:block;
+    display:-webkit-box;
+    -webkit-line-clamp:5;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 .link-more-info {
     position:absolute;
@@ -479,7 +549,7 @@ img { max-width:100%; }
     width:100%;
     text-align:center;
     text-transform:uppercase;
-    font:1.8rem/2 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 1.8rem/2 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 /* vote button + counter */
 .voting {
@@ -488,9 +558,9 @@ img { max-width:100%; }
 }
 .btn-vote {
     float:right;
-    padding:1rem 1rem 1rem 2rem;
+    padding:1rem 1rem 1rem 1.5rem;
     text-transform:uppercase;
-    font:2.4rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 2.4rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
     color:#fff;
     background-color:#47b900;
     border-radius:10rem;
@@ -504,29 +574,29 @@ img { max-width:100%; }
     display:inline-block;
     width:2.5rem;
     height:2.5rem;
-    margin-left:1rem;
+    margin-left:.7rem;
     border-radius:100%;
-    background:#6cc733 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background:#6cc733 url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
     transition:.2s;
 }
 .btn-vote:hover:after,
 .btn-vote:active:after{
-    background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background:#0b8ec5 url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
     -webkit-transform:scale(1.2,1.2) rotate(90deg);
     -ms-transform:scale(1.2,1.2) rotate(90deg);
     transform:scale(1.2,1.2) rotate(90deg);
 }
-.vote-disabled,
-.vote-disabled:hover {
+.btn-vote.vote-disabled,
+.btn-vote.vote-disabled:hover {
     cursor:default;
     opacity:.7;
     background-color:#aaa;
 }
-.vote-disabled:after,
-.vote-disabled:hover:after {
-    background:#bbb url(../assets/ico-plus.svg) no-repeat 50% 50%;
+.btn-vote.vote-disabled:after,
+.btn-vote.vote-disabled:hover:after {
+    background:#bbb url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.1rem;
     -webkit-transform:scale(1,1) rotate(0);
     -ms-transform:scale(1,1) rotate(0);
@@ -536,9 +606,9 @@ img { max-width:100%; }
     position:relative;
     top:.6rem;
     text-transform:uppercase;
-    font-size:1.6rem;
+    font-size:1.4rem;
 }
-.vote-counter b { font-size:2rem; }
+.vote-counter b { font-size:1.8rem; }
 
 
 /* ----- pagination ----- */
@@ -548,7 +618,7 @@ img { max-width:100%; }
     display:inline-block;
     min-height:3.5rem;
     padding:0 6rem;
-    font:1.8rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 1.8rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 .list-pagination li {
     display:inline-block;
@@ -593,11 +663,11 @@ img { max-width:100%; }
     overflow:hidden;
 }
 .list-pagination .prev a {
-    background:url(../assets/arrow-left.svg) no-repeat 45% 50%;
+    background:url(/static/voting/arrow-left.svg) no-repeat 45% 50%;
     background-size:1.2rem 2.2rem;
 }
 .list-pagination .next a {
-    background:url(../assets/arrow-right.svg) no-repeat 55% 50%;
+    background:url(/static/voting/arrow-right.svg) no-repeat 55% 50%;
     background-size:1.2rem 2.2rem;
 }
 
@@ -639,18 +709,28 @@ img { max-width:100%; }
 .person-id {
     float:left;
     width:100%;
-    margin-bottom:4rem; 
+    margin-bottom:4rem;
 }
 .person-id .picture {
+    overflow:hidden;
+    width:20rem;
+    height:20rem;
     margin-top:-8rem;
     text-align:center;
-}
-.person-id img {
-    display:inline-block;
+    background-color:rgba(255,255,255,.9);
     border:6px solid rgba(255,2552,255,.5);
     border-radius:100%;
     box-shadow:0 2px 2px rgba(0,0,0,.2);
 }
+.person-id img {
+    display:inline-block;
+    position:relative;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
+}
+
 .person-id h1 {
     margin:0;
     padding-right:4rem;
@@ -661,11 +741,11 @@ img { max-width:100%; }
     font-size:2.4rem;
     color:#333;
 }
-    
+
 .long-info { clear:both; }
 .person-details h2 {
     margin-bottom:2rem;
-    font:3.2rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
+    font:800 3.2rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
     color:#333;
 }
 .person-details p {
@@ -678,7 +758,7 @@ img { max-width:100%; }
     width:80%;
     margin-top:6rem;
 }
-.points-calculator li { font:2rem/1 'WhitneyBlack', Calibri, Arial, sans-serif; }
+.points-calculator li { font:800 2rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif; }
 .points-calculator li.overall {
     margin-top:2rem;
     padding-top:1rem;
@@ -697,10 +777,9 @@ img { max-width:100%; }
     display:inline-block;
     width:20%;
     text-align:right;
-    font-family:'WhitneyBook', Calibri, Arial, sans-serif;
+    font-family:"Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
 }
 .points-calculator .points {
-    vertical-align:top;
     float:right;
     display:inline-block;
     width:30%;
@@ -708,11 +787,15 @@ img { max-width:100%; }
     white-space:nowrap;
 }
 .points-calculator .points:before { content:"= "; }
-.points-calculator .points span {
+.points-calculator .points {
     text-transform:uppercase;
     font-size:1.4rem;
 }
-
+.points-calculator .points span {
+    text-transform:lowercase;
+    font-size:2rem;
+}
+.points-calculator .overall .points span { font-size:2.6rem; }
 
 .person-details .voting {
     margin-bottom:4rem;
@@ -738,54 +821,70 @@ img { max-width:100%; }
     height:3.5rem;
     margin-left:1rem;
     border-radius:100%;
-    background:#6cc733 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background:#6cc733 url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.4rem;
     transition:.2s;
 }
 .person-details .btn-vote:hover:after {
-    background:#0b8ec5 url(../assets/ico-plus.svg) no-repeat 50% 50%;
+    background:#0b8ec5 url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
     background-size:1.4rem;
     -webkit-transform:scale(1.2,1.2) rotate(90deg);
     -ms-transform:scale(1.2,1.2) rotate(90deg);
     transform:scale(1.2,1.2) rotate(90deg);
 }
 
-.btn-share-big {
+.person-details .btn-vote.vote-disabled:after,
+.person-details .btn-vote.vote-disabled:hover:after {
+    width:3.5rem;
+    height:3.5rem;
+    background:#bbb url(/static/voting/ico-plus.svg) no-repeat 50% 50%;
+    background-size:1.4rem;
+    -webkit-transform:scale(1,1) rotate(0);
+    -ms-transform:scale(1,1) rotate(0);
+    transform:scale(1,1) rotate(0);
+}
+
+/* share options big */
+.share-options-big {
+    position:relative;
+    width:100%;
+    padding:1rem 0;
+    text-align:center;
+    background-color:#f6f6f6;
+    border-radius:8px;
+}
+.share-options-big > span {
     position:relative;
     display:block;
-    width:100%;
-    padding:.8rem 1rem .8rem 2rem;
-    text-align:center;
     text-transform:uppercase;
-    font:2rem/1 'WhitneyBlack', Calibri, Arial, sans-serif;
-    color:#009fe2;
-    background-color:transparent;
-    border:2px solid #009fe2; 
-    border-radius:10rem;
-    transition:.2s;
+    margin-bottom:1rem;
+    font-size:2rem;
 }
-.btn-share-big:hover { background-color:rgba(0,159,226,.1); }
-.btn-share-big:after {
-    content:"";
-    float:right;
+.share-options-big li {
     display:inline-block;
-    width:2rem;
-    height:2rem;
-    margin-right:.5rem;
-    background:url(../assets/ico-share-blue.svg) no-repeat 50% 50%;
-    background-size:2rem 2rem;
+    width:auto;
+    padding:0 1rem;
+}
+.share-options-big a {
+    width:5rem;
+    height:5rem;
 }
 
 
 /* ----- popup window ----- */
 .mfp-content {
-    top:12vh;
+    top:10vh;
     max-width:117rem;
-    margin:0 0 2re 0;
+    margin-bottom:4rem;
+    padding:0;
     background-color:#fff;
     box-shadow:0 5px 30px rgba(0,0,0,.75);
+    -webkit-transform:skew(0deg, -1.5deg);
+    -ms-transform:skew(0deg, -1.5deg);
+    transform:skew(0deg, -1.5deg);
 }
-.mfp-content .person-details {
+.mfp-content .person-details,
+.mfp-content .text-page {
     background-color:#fff;
     -webkit-transform:skew(0deg, 0deg);
     -ms-transform:skew(0deg, 0deg);
@@ -793,21 +892,24 @@ img { max-width:100%; }
 }
 .mfp-content .page-header,
 .mfp-content .page-footer { display:none; }
-.mfp-content .person-details > div {
+.mfp-content .person-details > div,
+.mfp-content .text-page > div {
     -webkit-transform:skew(0deg, 1.5deg);
     -ms-transform:skew(0deg, 1.5deg);
     transform:skew(0deg, 1.5deg);
 }
 .mfp-content .person-details { margin-bottom:0; }
-.mfp-content .person-details .mfp-close {
+.mfp-content .person-details .mfp-close,
+.mfp-content .text-page .mfp-close {
     opacity:1;
-    position:abolute;
+    z-index:9999;
+    position:absolute;
     top:3rem;
     right:3rem;
     display:inline-block;
     width:3rem;
     height:3rem;
-    background:url(../assets/x-close.svg) no-repeat 50% 50%;
+    background:#fff url(/static/voting/x-close.svg) no-repeat 50% 50%;
     -webkit-transform:skew(0deg, 3deg);
     -ms-transform:skew(0deg, 3deg);
     transform:skew(0deg, 3deg);
@@ -815,7 +917,31 @@ img { max-width:100%; }
     white-space:nowrap;
     overflow:hidden;
 }
-    
+
+.text-page {
+    font-size:1.6rem;
+    color:#444;
+}
+.text-page > div { padding:8rem; } 
+.text-page h1 {
+    padding-right:4rem;
+    margin-bottom:3.6rem;
+    text-transform:uppercase;
+    font:3.6rem/1 "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
+}
+.text-page h1 strong {
+    font-family:"Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
+    font-weight:800;
+}
+.text-page h2 {
+    margin-top:2.4rem;
+    font:800 1.8rem "Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
+}
+.text-page p {
+    margin-bottom:1.2rem;
+    font-size:1.6rem;
+}
+
 
 /* ==========================================================================
    footer
@@ -844,7 +970,7 @@ img { max-width:100%; }
 .footer-bottom { padding:0 10rem; }
 .footer-links {
     position:relative;
-    top:2.5rem;
+    top:2.7rem;
     float:left;
     width:70%;
 }
@@ -853,7 +979,7 @@ img { max-width:100%; }
     margin-right:2rem;
 }
 .footer-links a {
-    font-size:1.8rem;
+    font-size:1.6rem;
     color:#fff;
 }
 
@@ -875,6 +1001,404 @@ a.powered-by {
 .powered-by img {
     width:28rem;
     height:3.8rem;
+}
+
+
+/* ==========================================================================
+   responsive
+   ========================================================================== */
+@media only screen and (max-width:1200px) {
+    
+    .page-header { padding:12rem 2rem 1rem 2rem; }
+    .list-tools { padding:0 2rem; }
+    .list-pagination ul { margin:0 2rem; }
+    
+}
+
+
+@media only screen and (max-width:1100px) {
+    
+    .list > li { width:33.33333333%; }
+    
+}
+
+
+@media only screen and (max-width:980px) {
+    
+    .main-copy {
+        margin:0 2rem 8rem 2rem;
+        padding-right:20rem;
+        background-size:14rem 14rem;
+    }
+    h1 { font-size:4.8rem; }
+    
+    .country-filter { width:auto; }
+    .country-filter b {
+        margin-left:2rem;
+        margin-bottom:1rem;
+    }
+    .search input[type=text] { height:4.5rem; }
+    
+    .person-id .picture {
+        width:18rem;
+        height:18rem;
+    }
+    .points-calculator { width:100%; }
+    .share-options-big a {
+        width:4rem;
+        height:4rem;
+    }
+    
+    .footer-bottom { padding:0 2rem; }
+    
+}
+
+
+@media only screen and (max-width:840px) {
+    
+    .list > li { width:50%; }
+        
+    .long-info .left-column,
+    .long-info .right-column {
+        clear:both;
+        float:none;
+        width:100%;
+        padding:0;
+    }
+    .person-id { margin-bottom:2rem; }
+    .person-id .right-column {
+        margin-top:-2rem;
+        padding-left:4rem;
+    }
+    .long-info .left-column {
+        overflow:hidden;
+        margin-bottom:2rem;
+    }
+    .person-id .picture {
+        width:16rem;
+        height:16rem;
+    }
+    .person-details .voting { float:left; }
+    .share-options-big {
+        top:1rem;
+        float:right;
+        width:auto;
+        padding:.5rem 1rem;
+    }
+    .share-options-big > span { margin-bottom:.5rem; }
+    
+    .footer-links {
+        width:100%;
+        float:none;
+        top:0;
+        margin-bottom:4rem;
+        text-align:center;
+    }
+    .footer-links li { margin:0 1rem; }
+    a.powered-by {
+        float:none;
+        display:block;
+        width:25rem;
+        max-width:25rem;
+        margin:0 auto;
+    }
+    
+}
+
+
+@media only screen and (max-width:760px) {
+    
+    .main-copy {
+        margin:0 2rem 6rem 2rem;
+        padding-right:15rem;
+        background-size:12rem 12rem;
+    }
+    h1 { font-size:4.2rem; }
+    p {
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .mfp-content .person-details .mfp-close {
+        top:2rem;
+        right:2rem;
+    }
+    .person-id .right-column { width:74%; }
+    .person-id .picture {
+        width:14rem;
+        height:14rem;
+    }
+
+    .footer-logo { margin-bottom:4rem; }
+    .footer-logo li { padding:0 4rem; }
+    
+    .text-page > div { padding:4rem; }
+    
+}
+
+
+
+@media only screen and (max-width:680px) {
+
+    .page-header { padding-bottom:0; }
+    .logo {
+        width:16rem;
+        height:8.9rem;
+        margin-bottom:2rem;
+    }
+    .main-nav { top:1.5rem; }
+    .main-nav li {
+        display:block;
+        margin:0 0 1.5rem 0;
+        text-align:right;
+    }
+    
+    .main-copy {
+        margin-top:-4rem;
+        padding-right:14rem;
+        background-size:10rem 10rem;
+    }
+    .country-filter select,
+    .search input[type=text] { width:20rem; }
+    
+    .person-id h1 {
+        margin-bottom:.5rem;
+        font-size:4.2rem;
+    }
+    .person-id .person-country { font-size:2rem; }
+    
+}
+
+
+@media only screen and (max-width:640px) {
+    
+    .person-id .left-column {
+        width:100%;
+        margin-bottom:2rem;
+    }
+    .person-id .right-column {
+        clear:left;
+        float:none;
+        width:100%;
+        margin-top:0;
+        padding-left:0;
+    }
+    .person-id h1 { padding-right:0;  }
+    .person-id .picture {
+        width:16rem;
+        height:16rem;
+    }
+    
+}
+
+
+@media only screen and (max-width:560px) {
+    
+    .main-nav li { font-size:2rem; }
+    
+    .main-copy {
+        margin-top:-6rem;
+        padding-right:0;
+        padding-top:12rem;
+        text-align:center;
+        background-position:50% 0;
+        background-size:10rem 10rem;
+    }
+    
+    .country-filter,
+    .search {
+        float:none;
+        display:block;
+        width:100%;
+    }
+    .country-filter select { width:100%; }
+    .search {
+        position:relative;
+        padding-right:6rem;
+    }
+    .search input[type=text] { width:100%; }
+    .search input[type="submit"] {
+        position:absolute;
+        bottom:0;
+        right:0;
+        width:4.5rem;
+        height:4.5rem;
+        background-size:2rem;
+    }
+    
+    .list > li {
+        width:100%;
+        padding-bottom:4rem;
+    }
+    .person {
+        float:left;
+        width:100%;
+        padding:1.5rem;
+        text-align:left;
+        background: rgba(255,255,255,.3);
+        background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0.3)));
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+        background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+        background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+        border-radius:8px;
+    }
+
+    .person-pic {
+        float:left;
+        width:25%;
+        margin-bottom:0;
+    }
+    .person-pic > a {
+        width:11rem;
+        height:11rem;
+        border:4px solid rgba(255,2552,255,.5);
+    }
+    .btn-share {
+        top:-.5em;
+        left:-.5rem;
+        width:4rem;
+        height:4rem;
+        background-size:2rem 2rem;
+    }
+    .btn-share:hover { background-size:2rem 2rem; }
+
+    .share-options-small {
+        width:12rem;
+        top:-.5rem;
+        left:-.5rem;
+        height:4rem;
+    }
+    .share-options-small li { height:4rem; }
+    
+    .short-info {
+        float:right;
+        width:72%;
+        height:auto;
+        margin-top:0;
+        padding:1rem 0 0 2rem;
+        background:none;
+    }
+    .person:hover .short-info { box-shadow:none; }
+    .short-info h2 { font-size:2.2rem; }
+    .short-info p,
+    .link-more-info { display:none; }
+
+    .voting {
+        clear:both;
+        width:100%;
+    }
+    .btn-vote {
+        padding:.7rem 1rem .7rem 2rem;
+        font-size:2rem;   
+    }
+    .btn-vote:after {
+        width:2rem;
+        height:2rem;
+        background-size:1rem;
+    }
+    .btn-vote:hover:after { background-size:1rem; }
+    
+    .person-details { padding: 4rem 2rem 8rem 2rem; }
+    .person-details .voting { width:auto; }
+    .points-calculator li { margin-bottom:2rem; }
+    .points-calculator b {
+        display:block;
+        width:100%;
+        margin-bottom:.5rem;
+    }
+    .points-calculator .overall b {
+        display:inline-block;
+        width:auto;
+    }
+    .points-calculator .number {
+        width:auto;
+        text-align:left;
+        font-family:"Whitney SSm A", "Whitney SSm B", Calibri, Arial, sans-serif;
+    }
+    .points-calculator .points {
+        float:none;
+        width:auto;
+        white-space:normal;
+    }
+    
+    
+    .footer-logo li { padding:0 2rem; }
+    
+}
+
+
+@media only screen and (max-width:460px) {
+    
+    .logo {
+        width:12rem;
+        height:6.7rem; 
+    }
+    .main-nav { top:1rem; }
+    .main-nav li { font-size:1.8rem; }
+    
+    .person-pic > a {
+        width:10rem;
+        height:10rem;
+        border:3px solid rgba(255,2552,255,.5);
+    }
+    .short-info { width:70%; }
+    
+    .person-details .voting {
+        float:none;
+        width:100%;
+        margin-bottom:2rem;
+    }
+    .share-options-big {
+        top:0;
+        float:none;
+        width:100%;
+    }
+    
+    .text-page > div { padding:2rem; }
+    
+}
+
+
+@media only screen and (max-width:420px) {
+    
+    .person-pic > a {
+        width:9rem;
+        height:9rem;
+    }
+    .short-info { width:65%; }
+    
+    .footer-logo li {
+        width:40%;
+        padding:0 2rem;
+    }
+    
+}
+
+@media only screen and (max-width:380px) {
+    
+    .logo {
+        width:10rem;
+        height:5.6rem; 
+    }
+    .main-nav { top:.3rem; }
+    .main-nav li { font-size:1.6rem; }
+    .person-pic > a {
+        width:8rem;
+        height:8rem;
+        border:3px solid rgba(255,2552,255,.5);
+    }
+    .short-info { width:70%; }
+
+    
+}
+
+
+@media only screen and (max-width:380px) {
+    
+    .main-nav li { font-size:1.4rem; }
+    
 }
 
 

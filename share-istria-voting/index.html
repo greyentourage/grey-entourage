@@ -7,10 +7,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7524954/769106/css/fonts.css" />
         <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
 
         <script src="js/modernizr-2.8.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -29,7 +28,7 @@
                     fixedContentPos: true,
                     fixedBgPos: true
                 });
-                
+
                 // unordered list filter menu > select on mobile
                 if ($(window).width() < 960) {
                     $('.country-filter ul').wrap('<div></div>');
@@ -43,15 +42,25 @@
 
                         $(this).replaceWith($select);
                     });
+
+                    $(function(){
+                      $('.country-filter select').bind('change', function () {
+                          var url = $(this).val();
+                          if (url) {
+                              window.location = url;
+                          }
+                          return false;
+                      });
+                    });
                 }
             });
-        </script>
+          </script>
     </head>
     <body>
 
         <header role="banner" class="page-header">
             <div class="inner">
-                <a href="index.html" class="logo"><img src="assets/logo-shareIstria.svg" alt="" /></a>
+                <a href="index.html" class="logo"><img src="/static/voting/logo-shareIstria.svg" alt="" /></a>
                 <nav role="navigation" class="main-nav">
                     <ul>
                         <li><a href="about.html">About</a></li>
@@ -94,19 +103,23 @@
                         <article class="person">
                             <div class="person-pic">
                                 <a href="candidate.html" class="page-link">
-                                    <img src="content/profile-img.jpg" alt="" />
+                                    <img src="content/profile-img-vertical.jpg" alt="" />
                                 </a>
                                 
                                 <button class="btn-share">Share</button>
                                 <ul class="rrssb-buttons share-options-small">
                                     <li>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com" class="ico-facebook popup">Facebook</a>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/candidate/{{this.urlIdentificator}}" 
+            onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')"
+            target="_blank" class="ico-facebook">Facebook</a>
                                     </li>
                                     <li>
-                                        <a href="http://twitter.com/home?status=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/" class="ico-twitter popup">Twitter</a>
+                                        <a href="http://twitter.com/home?status=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/candidate/{{this.urlIdentificator}}" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')"
+            target="_blank" class="ico-twitter">Twitter</a>
                                     </li>
                                     <li>
-                                        <a href="https://plus.google.com/share?url=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/" class="ico-google-plus popup">Google+</a>
+                                        <a href="https://plus.google.com/share?url=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/candidate/{{this.urlIdentificator}}"  onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')"
+            target="_blank" class="ico-google-plus">Google+</a>
                                     </li>
                                 </ul>
                                 
@@ -129,7 +142,22 @@
                                 <a href="candidate.html" class="page-link">
                                     <img src="content/profile-img-2.jpg" alt="" />
                                 </a>
-                                <button class="btn-share">Share</button>  
+                                <button class="btn-share">Share</button>
+                                <ul class="rrssb-buttons share-options-small">
+                                    <li>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/candidate/{{this.urlIdentificator}}" 
+            onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')"
+            target="_blank" class="ico-facebook">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://twitter.com/home?status=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/candidate/{{this.urlIdentificator}}" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')"
+            target="_blank" class="ico-twitter">Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://plus.google.com/share?url=ShareIstria.com%20Vote%20for%20me!%20http://www.shareistria.com/candidate/{{this.urlIdentificator}}"  onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')"
+            target="_blank" class="ico-google-plus">Google+</a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="short-info">
                                 <h2><a href="candidate.html" class="page-link">Gregory Bell</a></h2>
@@ -327,7 +355,7 @@
                         <article class="person">
                             <div class="person-pic">
                                 <a href="candidate.html" class="page-link">
-                                    <img src="content/profile-img-4.jpg" alt="" />
+                                    <img src="/static/voting/profile-img-4.jpg" alt="" />
                                 </a>
                                 <button class="btn-share">Share</button>
                             </div>
@@ -362,19 +390,19 @@
         
         <footer role="contentinfo" class="page-footer">
             <ul class="footer-logo">
-                <li><a href="http://croatia.hr/en-GB/Homepage" target="_blank"><img src="assets/logo-croatia.svg" alt="" /></a></li>
-                <li><img src="assets/logo-shareIstria.svg" alt="" /></li>
-                <li><a href="http://www.istra.hr/" target="_blank"><img src="assets/logo-istra.svg" alt="" /></a></li>
+                <li><a href="http://croatia.hr/en-GB/Homepage" target="_blank"><img src="/static/voting/logo-croatia.svg" alt="" /></a></li>
+                <li><img src="/static/voting/logo-shareIstria.svg" alt="" /></li>
+                <li><a href="http://www.istra.hr/" target="_blank"><img src="/static/voting/logo-istra.svg" alt="" /></a></li>
             </ul>
             <div class="footer-bottom">
                 <ul class="footer-links">
                     <li><a href="http://www.istra.hr/" target="_blank">Istra Tourist Board</a></li>
                     <li><a href="mailto:info@shareistria.com">info@shareistria.com</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="privacy-policy.html" class="page-link">Privacy Policy</a></li>
                 </ul>
                 <a href="http://greyentourage.com/" target="_blank" class="powered-by">
                     <small>powered by:</small>
-                    <img src="assets/logo-greyentourage.svg" alt="" />
+                    <img src="/static/voting/logo-greyentourage.svg" alt="" />
                 </a>
             </div>
         </footer>
