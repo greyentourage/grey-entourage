@@ -453,8 +453,7 @@ img { max-width:100%; }
 }
 
 .share-options-small {
-    opacity:0;
-    display:block;
+    display:none;
     position:absolute;
     top:0;
     left:0;
@@ -465,9 +464,11 @@ img { max-width:100%; }
     border-radius:10rem;
     transition:.3s;
 }
+.btn-share:active + .share-options-small,
 .share-options-small:hover,
 .share-options-small:active {
     opacity:1;
+    display:block;
 }
 .share-options-small li {
     float:left;
