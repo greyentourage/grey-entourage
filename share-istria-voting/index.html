@@ -54,9 +54,14 @@
                     });
                 }
                 
-                $(".btn-share").click(function() {
+                // open share options
+                $(".btn-share").click( function(event){
+                    event.stopPropagation();
                     $(".share-options-small").fadeOut();
                     $(this).siblings(".share-options-small").fadeToggle();
+                });
+                $(document).click( function(){
+                    $(".share-options-small").fadeOut();
                 });
             });
           </script>
