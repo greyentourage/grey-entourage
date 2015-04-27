@@ -488,11 +488,7 @@ img { max-width:100%; }
     text-indent:1000%;
     white-space:nowrap;
     overflow:hidden;
-    transition:.2s;
 }
-.ico-facebook:hover,
-.ico-twitter:hover,
-.ico-google-plus:hover { opacity:.75; }
 .ico-facebook { background:url(/static/voting/ico-facebook.svg) no-repeat 50% 50%; }
 .ico-twitter { background:url(/static/voting/ico-twitter.svg) no-repeat 50% 50%; }
 .ico-google-plus { background:url(/static/voting/ico-google-plus.svg) no-repeat 50% 50%; }
