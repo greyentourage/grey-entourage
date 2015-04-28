@@ -187,6 +187,8 @@ a.btn:hover {
     header
 ---------------------------- */
 .page-header {
+    float:left;
+    width:100%;
     background:#d2e5f6;
     background:-moz-linear-gradient(top, #d2e5f6 0%, #eff4fa 100%);
     background:-webkit-gradient(left top, left bottom, color-stop(0%, #d2e5f6), color-stop(100%, #eff4fa));
@@ -207,9 +209,9 @@ a.btn:hover {
 
 /* header info txt */
 .info-txt {
-    z-index:2;
-    position:relative;
-    width:52%;
+    float:left;
+    width:60%;
+    padding-bottom:4rem;
 }
 .banner img {
     display:inline-block;
@@ -221,70 +223,27 @@ a.btn:hover {
 
 /* controls */
 .info-btns {
-    z-index:1;
-    position:absolute;
-    top:0;
-    right:0;
-    width:60%;
-    height:100%;
+    float:right;
+    width:30%;
 }
-.info-btns:before {
-    content:'';
-    position:absolute;
-    top:0;
-    right:16rem;
-    display:inline-block;
-    width:14.5rem;
-    height:13rem;
-    background:url(../assets/header-img-top.png) no-repeat 50% 0; 
-    background-size:cover;
-}
-.info-btns:after {
-    content:'';
-    position:absolute;
-    bottom:0;
-    right:0;
-    display:inline-block;
-    width:40rem;
-    height:16rem;
-    background:url(../assets/header-img-bottom.png) no-repeat 50% 0;
-    background-size:cover;
-}
-
-.info-btns li {
-    z-index:100;
-    position:absolute;
-}
-
-.info-btns li:nth-child(1) {
-    bottom:4.3rem;
-    right:40.9rem;
-}
-
-.info-btns li:nth-child(2) {
-    bottom:16.1rem;
-    right:34rem;
-}
-.info-btns li:nth-child(3) {
-    bottom:16.8rem;
-    right:3rem;
-}
+.info-btns li { margin-bottom:2rem; }
 
 .info-btns button {
     cursor:pointer;
+    position:relative;
     min-height:4rem;
-    padding-right:5rem;
-    font:1.6rem/1 'FranklinGothic-Medium', Arial, Helvetica, sans-serif;
-    text-align:right;
+    padding-left:5.5rem;
+    font:2rem/1 'FranklinGothic-Medium', Arial, Helvetica, sans-serif;
     color:#0a304c;
+    text-align:left;
     text-shadow:0 1px 0 rgba(255,255,255,.9);
 }
     
 .info-btns button:before {
     content:url(../assets/ico-plus.svg);
     position:absolute;
-    top:.2rem;
-    right:0;
+    top:0rem;
+    left:0;
     display:inline-block;
     width:4rem;
     height:4rem;
@@ -367,7 +326,10 @@ a.btn:hover {
 /* ----------------------------
     content
 ---------------------------- */
-.page-content { padding-bottom:8rem; }
+.page-content {
+    clear:both;
+    padding-bottom:8rem;
+}
 
 /* walls.io */
 .social-feed {
@@ -501,38 +463,6 @@ a.btn:hover {
     .carousel p { font-size:1.4rem; }
     .carousel .intro-txt { font-size:1.6rem; }
     
-    .info-txt { width:50%; }
-    
-    .info-btns:before { right:11rem; }
-    .info-btns:after {
-        width:30rem;
-        height:12rem;
-    }
-
-    .info-btns li:nth-child(1) {
-        bottom:2rem;
-        right:30.8rem;
-    }
-    .info-btns li:nth-child(2) {
-        bottom:12rem;
-        right:27rem;
-    }
-    .info-btns li:nth-child(3) {
-        bottom:13rem;
-        right:3.5rem;
-    }
-
-    .info-btns button {
-        min-height:2.6rem;
-        padding-right:3.8rem;
-    }
-    .info-btns button:before {
-        width:3rem;
-        height:3rem;
-        top:.4rem;
-        padding:.85rem;
-    }
-    
     .carousel .btn { margin-top:2rem; }
     .carousel-txt { padding-left:4rem; }
     
@@ -548,38 +478,12 @@ a.btn:hover {
     }
     .info-msg-link { margin:2rem 0; }
     
-    .info-btns:before,
-    .info-btns:after { display:none; }
-    
     .info-btns {
         position:relative;
-        top:auto;
-        right:auto;
+        top:-2rem;
         width:100%;
-        margin-top:4rem;
     }
 
-    .info-btns li {
-        position:relative;
-        bottom:auto !important;
-        right:auto !important;
-        margin-bottom:2rem;
-    }
-    .info-btns li br { display:none; }
-    .info-btns button {
-        min-height:4rem;
-        padding-left:5rem;
-        font:2rem/1 'FranklinGothic-Medium', Arial, Helvetica, sans-serif;
-        text-align:left;
-    }
-    .info-btns button:before {
-        top:0;
-        left:0;
-        width:4rem;
-        height:4rem;
-        padding:1.1rem;
-    }
-    
     .info-slide { min-height:100vh; }
     .info-slide .inner { padding-top:12rem; }
     .info-slide .info-txt { width:100%; }
