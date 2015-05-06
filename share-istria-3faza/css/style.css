@@ -1,0 +1,212 @@
+/*====================================== reset.css is here ========================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;}
+table {	border-collapse:collapse; border-spacing:0;}
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal; font-weight:normal;}
+ol,ul { list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {	font-size:100%;	font-weight:bold;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+.clear{clear:both; font-size:1px;line-height:1px; display:block; height:0;}
+.clrflt{clear:both;}
+.last	{margin:0 !important;}
+.pad_last{padding:0 !important;}
+.no_bg {background:none !important;}
+.no_border	{ border:none !important;}
+header,nav,section,article,aside,footer,hgroup {display: block;}
+/**************************************************************************************/
+a											{color:#000; text-decoration:none; outline:0 none;}
+a:hover										{color:#000;  text-decoration:none;}
+h1											{font-size:24px;}
+h2											{font-size:22px;}
+h3											{font-size:18px;}
+h4											{font-size:16px;}
+h5											{font-size:14px;}
+h6											{font-size:12px;}
+/*----------------------------------------------------------------------------------*/
+html 										{height:100%;}
+body										{color:#b1b1b1; font-family:"Arial", Verdana, Tahoma; font-size:12px;}
+.flt_lt										{float:left; display:inline;}
+.flt_rt										{float:right; display:inline;}
+@font-face {
+	font-family: 'Conv_ufonts.com_whitney-black';
+	src: url('../fonts/whitney-black/ufonts.com_whitney-black.eot');
+	src: local('☺'), url('../fonts/whitney-black/ufonts.com_whitney-black.woff') format('woff'), 
+	url('../fonts/whitney-black/ufonts.com_whitney-black.ttf') format('truetype'), 
+	url('../fonts/whitney-black/ufonts.com_whitney-black.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_ufonts.com_whitney-book';
+	src: url('../fonts/whitney-book/ufonts.com_whitney-book.eot');
+	src: local('☺'), url('../fonts/whitney-book/ufonts.com_whitney-book.woff') format('woff'), 
+	url('../fonts/whitney-book/ufonts.com_whitney-book.ttf') format('truetype'), 
+	url('../fonts/whitney-book/ufonts.com_whitney-book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ----------------------- layout ----------*/
+.wrapper									{ width:100%;}
+/* ------------------ HEADER HERE -------------------*/
+.banner										{ width:100%; min-height:725px; background:url(../images/banner-bg.png) no-repeat; background-size:100% 100%;}
+.header										{ width:100%; height:auto; background:url(../images/header-bg.png) no-repeat; background-size:100% 100%;}
+.header_in									{ width:1170px;  margin:0 auto; padding:20px 0 30px 0;}
+
+.logo										{ float:left; margin:0; padding:0;}
+
+.header_right								{ float:right; padding:0; margin:18px 0 0 0;}
+.header_right ul							{ float:left; display:inline-block; padding:0; margin:0;}
+.header_right ul li							{ float:left; display:inline-block; padding:0; margin:0 20px 0 0; position:relative;}
+.header_right ul li a						{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:25px; font-weight:normal; color:#ffffff; display:block; padding:0; margin:0; text-transform:uppercase; line-height:43px;}
+.header_right ul li:hover ul				{ display:block;}
+.header_right ul li a:hover					{ color:#ffffff;}
+.header_right ul li:hover a					{ color:#0eb8ff;}
+
+.header_right ul li ul  					{ width:132px; margin:0;  padding:0; display:none; position:absolute; right:-29px; top:35px; z-index:99;}
+.header_right ul li ul li					{ width:100%; margin:0  0 0px 0; padding:1px 0 0 0 ; display:block; border:none;}
+.header_right ul li ul li a					{ background:#c3c3c3; margin:0; padding:7px 0 7px 8px;font-family: 'Conv_ufonts.com_whitney-black'; font-size:20px; font-weight:normal; color:#ffffff !important; text-transform:uppercase; font-weight:normal; line-height:20px; display:block;}
+.header_right ul ul li:hover a				{ color:#0eb8ff !important;}
+
+.social_icons								{ float:right;}
+.social_icons ul							{ float:left; display:inline-block; padding:0; margin:0;}
+.social_icons ul li							{ float:left; display:inline-block; padding:0; margin:0 20px 0 0;}
+.social_icons ul li a						{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:25px; font-weight:normal; color:#ffffff; display:block; padding:0; margin:0; text-transform:uppercase; line-height:43px;}
+.social_icons ul li a:hover					{ background:none;}
+
+
+
+
+.list {margin: 0 0 0 0 !important;  webkit-transition: all 0.5s ease-in-out;  -moz-transition: all 0.5s ease-in-out;  -o-transition: all 0.5s ease-in-out;  transition: all 0.5s ease-in-out;}
+  
+  
+  
+
+  
+.team_block									{ width:1170px;  margin:0 auto; padding:59px 0 0 0;}
+.team_block h1								{ float:left; font-family: 'Conv_ufonts.com_whitney-black'; font-size:63px; font-weight:normal; color:#ffffff; line-height:66px; background:url(../images/team-img.png) no-repeat left 23px; padding:20px 0 0 81px; letter-spacing:0.7px;}
+.team_block h1.mble							{ display:none;}				
+.team_right									{ width:235px; float:right; margin:0; padding:0;}
+.team_right h2								{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:24px; font-weight:normal; color:#ffffff; display:block; padding:0 0 8px 20px; margin:0; line-height:24px;}
+
+.team_membars								{ margin:77px 0 0 20px; padding:0;}
+.team_membars ul							{ float:left; display:inline-block; padding:0; margin:0 52px 0 0; position:relative;}
+.team_membars ul li							{ width:141px; float:left; display:inline-block; padding:0; margin:0 35px 0 0;}
+.team_membars ul li span					{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:20px; font-weight:normal; color:#ffffff; display:block; padding:21px 0 0 0; margin:0; line-height:21px; text-align:center;}
+.team_membars ul li.txt						{ margin:0; width:auto; position:absolute; left:62px; bottom:-75px;}
+.team_membars ul li.txt h3					{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:35px; font-weight:normal; font-style:italic; color:#009fe2;}
+.team_membars ul li small					{ display:none;}
+/* ------------------ MAIN CONTENT HERE -------------------*/
+.main_content								{ width:100%;}
+.main_content_in							{ width:1175px; margin:0 auto; padding:51px 0 112px 0;}
+.headding									{ padding:0; margin:0 0 74px 0;}
+.headding h2								{ float:left; font-family: 'Conv_ufonts.com_whitney-black'; font-size:65px; font-weight:normal; color:#009414; line-height:71px; padding:0;}
+.headding h2.team							{ float:right; padding:0 165px 0 0;}
+.main_content_in h3							{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:36px; font-weight:normal; color:#0071c8; line-height:42px; padding:0 0 33px 0;}
+.main_content_in p							{ width:550px; font-family: 'Conv_ufonts.com_whitney-book'; font-size:25px; font-weight:normal; color:#3e3e3e; line-height:32px; padding:0 0 15px 0;}
+.main_content_in a.read_mre							{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:19px; font-weight:normal; color:#009fe2; line-height:20px; margin:0 42px 44px 0 !important; float:right; text-decoration:underline;}
+.main_content_in a:hover					{ text-decoration:none; color:#05b1f9;}
+
+.main_content_in ul							{ float:left; display:inline-block; padding:0; margin:0 0 35px 0;}
+.main_content_in ul li						{ float:left; display:inline-block; padding:0; margin:0 5px 5px 0;}
+.main_content_in ul li a					{ display:block; padding:0; margin:0 !important; line-height:43px;}
+.main_content_in span						{ position:relative; padding:0 0 41px 0; display:block;}
+
+.left_blog									{ width:583px; float:left; padding:19px 0 0 0; border-right:dashed 3px #9f9f9f;}
+.left_blog h4								{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:45px; font-weight:normal; color:#0a76c9; line-height:48px; padding:0 0 25px 0; letter-spacing:0.1px;}
+
+a.play_btn									{ width:190px; position:absolute; left:166px; top:149px; background:url(../images/arrow.png) no-repeat 170px center #009fe2; font-family: 'Conv_ufonts.com_whitney-black'; font-size:20px; font-weight:normal; color:#ffffff !important; text-decoration:none !important; padding:16px 0 20px 26px !important; border-radius:30px; line-height:20px !important;}
+
+.right_blog									{ width:552px; float:right;}
+.right_blog em								{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:20px; font-weight:normal; color:#9f9f9f; line-height:20px; padding:24px 0 10px 0; display:block;}
+.main_content_in h3.aenean					{ padding:0 0 22px 0;}
+.main_content_in a.read						{ margin:0 12px 25px 0 !important;}
+.right_blog em.mae							{ padding:2px 0 8px 0;}
+.main_content_in span.video2				{ padding:0 0 23px 0;}
+
+
+.load_more									{ width:273px; float:none; font-family: 'Conv_ufonts.com_whitney-black'; font-size:33px; font-weight:normal; color:#009fe2; line-height:20px; margin:25px auto 0 auto; padding:18px 0; text-align:center; border:solid 3px #009fe2; display:block; text-decoration:none; border-radius:30px; text-transform:uppercase; cursor:pointer;}
+.load_more:hover							{ border:solid 3px #2bc0ff; color:#2bc0ff;}
+#myList										{ float:none;}
+#myList li									{ display:none;}
+
+.karta_block								{ width:100%; background:#4640ab; position:relative;}
+.karta_block_in								{ width:1170px; margin:0 auto; padding:50px 0 55px 0;}
+
+.day										{ width:555px; float:left; padding:169px 0 0 0; margin:0;}
+.day h2										{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:44px; font-weight:normal; color:#ffffff; line-height:49px; padding:0 0 62px 0;}
+.day p										{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:30px; font-weight:normal; color:#ffffff; line-height:31px; padding:0; display:block;}
+
+.map										{ width:554px; float:right;}
+.blue_top									{ width:100%; height:49px; background:url(../images/blue-top-bg.png) no-repeat left bottom; position:absolute; left:0; top:-49px; background-size:100% 100%;}
+.blue_btoom									{ width:100%; height:49px; background:url(../images/blue-bottom-bg.png) no-repeat left bottom; position:absolute; left:0; bottom:-49px; background-size:100% 100%;}
+
+/*----------------- FOOTER STARTS ----------------------*/
+.footer										{ width:100%; background:url(../images/footer-bg.jpg) no-repeat; background-size:cover;}
+.footer_in									{ width:1170px; margin:0 auto; padding:100px 0 163px 0;}
+.brands										{ width:824px; margin:0 auto; padding:0 0 150px 0;}
+.brands ul									{ float:left; display:inline-block; padding:0; margin:0;}
+.brands ul li								{ float:left; display:inline-block; padding:0; margin:0 105px 0 0;}
+.brands ul li a								{ display:block; padding:0; margin:0;}
+.footer_bottom								{ width:972px; margin:0 auto; padding:0;}
+.footer_nav									{ width:453px; float:left; padding:0; margin:51px 0 0 0;}
+.footer_nav ul								{ float:left; display:inline-block; padding:0; margin:0;}
+.footer_nav ul li							{ float:left; display:inline-block; padding:0; margin:0 26px 0 0;}
+.footer_nav ul li a							{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:18px; font-weight:normal; color:#ffffff; display:block; padding:0; margin:0; line-height:18px; text-decoration:underline;}
+.footer_nav ul li a:hover					{ text-decoration:none; color:#0a76c9;}
+
+.footer_btm_rght							{ width:283px; float:right; padding:0; margin:0;}
+.footer_btm_rght span						{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:18px; font-weight:bold; color:#80817a; display:block; padding:0 0 9px 0; margin:0; line-height:18px; text-align:center;}
+
+
+.popup										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup_in									{ width:800px; margin:0 auto; padding:60px 0 75px 0;}
+.popup_in span								{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:20px; font-weight:normal; color:#9f9f9f; line-height:20px; padding:24px 0 10px 0; display:block; }
+.popup_in h2								{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:36px; font-weight:normal; color:#0071c8; line-height:40px; padding:0 0 33px 0;}
+.popup_in p									{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:25px; font-weight:normal; color:#3e3e3e; line-height:32px; padding:0 0 30px 0;}
+.popup_in img								{ margin:0 0 33px 0;}
+.popup_in ul								{ float:right; display:inline-block; padding:65px 0 0 0; margin:0;}
+.popup_in ul li								{ float:left; display:inline-block; padding:0; margin:0 10px 0 0 !important;}
+.popup_in ul li a							{ display:block; padding:0; margin:0;}
+.popup_in ul li a img						{ margin:0;}
+.close										{ position:absolute; top:40px; right:40px;  background:url(../images/close-btn.png) no-repeat right top; width:44px; height:44px; display:block; cursor:pointer;}
+
+.popup1										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup2										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup3										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup4										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup5										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
+.popup_in.two								{ width:1090px; margin:0 auto; padding:60px 0 75px 0;}
+.popup_in span.video_blck					{ position:relative; padding:0;}
+.popup_in ul.mrg							{ padding:0;}
+
+
+
+.slider										{ padding:0; margin:0;}
+.slider ul									{ float:none !important; display:block; padding:0; margin:0;}
+.slider ul li								{ width:1090px !important; display:block; padding:0; margin:0 !important;}
+
+.pager										{ padding:0; margin:0 0 35px 0; position:relative;}
+.pager ul									{ width:966px; display:block; padding:0; margin:0 auto;}
+.pager ul li								{ width:133px !important; float:left; display:inline-block; padding:0; margin:0 5px 0 0 !important;}
+.pager ul li a								{ display:block; padding:0; margin:0; cursor:pointer;}
+.pager ul li a img							{ opacity:0.5}
+.pager ul li a img:hover					{ opacity:1; margin:0; padding:0;}
+.pager ul li a.active img					{ opacity:1; }
+
+.load_main									{ width:1170px; margin:0 auto;}
+
+a.play_btn1									{ width:190px; position:absolute; left:465px; top:300px; background:url(../images/arrow.png) no-repeat 170px center #009fe2; font-family: 'Conv_ufonts.com_whitney-black'; font-size:20px; font-weight:normal; color:#ffffff !important; text-decoration:none !important; padding:16px 0 20px 26px !important; border-radius:30px; line-height:20px !important;}
+.slider .bx-wrapper .bx-viewport			{ height:100% !important;}
+
+
+
+
+
+
+
+
+
+
+
