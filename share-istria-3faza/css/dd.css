@@ -37,7 +37,7 @@ img.fnone{float:none !important}
 .dd .divider{ }
 .dd .ddArrow{width:45px;height:45px; margin:-22px -63px 0 0; background:url(../images/drop-arrow.png) no-repeat right center; cursor:pointer;}
 .dd .ddArrow:hover{background-position:0 100%;}
-.dd .ddTitle{ font-family: 'Conv_ufonts.com_whitney-black'; font-size:24px; font-weight:normal; color:#ffffff; border:solid 2px #fff; width:170px; border-radius:30px; background:url(../images/drop-bg.png) repeat;}
+.dd .ddTitle{ font-family: 'whitney_blackregular'; font-size:24px; font-weight:normal; color:#ffffff; border:solid 2px #fff; width:170px; border-radius:30px; background:url(../images/drop-bg.png) repeat;   line-height: 24px;}
 .dd .ddTitle .ddTitleText{ padding:9px 0 10px 21px !important;}
 .dd .ddTitle .ddTitleText .ddTitleText{padding:0;}
 .dd .ddTitle .description{font-size:12px; color:#666}
