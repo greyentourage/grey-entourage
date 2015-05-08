@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>SHAREIstria</title>
+
+<!-- SET: STYLESHEET -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/dd.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<!-- END: STYLESHEET -->
+<!-- SET: SCRIPTS -->
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.dd.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(e) {		
+		$("select").msDropdown({roundedBorder:false});
+		
+		$('.bxslider').bxSlider({
+		  pagerCustom: '.bx-pager',
+		  auto:true,
+		});
+
+
+    $(".menu").click(function () {
+      $('.header_right').toggleClass("list");
+	  $('.header_right').show();
+	  
+    });
+	    $(".close1").click(function () {
+		  $('.header_right').removeClass("list");
+		  $('.header_right').hide();
+	  
+		});		
+		
+		
+		
+	$('.main_content_in ul li a.click1').click(function() {
+			  $('.popup').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup').trigger('close');
+			});
+	});
+	
+	$('.main_content_in ul li a.click2').click(function() {
+			  $('.popup1').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup1').trigger('close');
+			});
+	});
+	$('a.play_btn').click(function() {
+			  $('.popup2').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup2').trigger('close');
+			});
+	});
+	
+	$('a.play_btn').click(function() {
+			  $('.popup3').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup3').trigger('close');
+			});
+	});
+	
+	$('.main_content_in ul li a.click3').click(function() {
+			  $('.popup4').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup4').trigger('close');
+			});
+	});
+	
+	$('.main_content_in ul li a.click4').click(function() {
+			  $('.popup5').lightbox_me({
+				  centered: true 
+		   });
+		   e.preventDefault();
+			 $(".close").click(function(){
+			 $('.popup5').trigger('close');
+			});
+	});	
+
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+    size_li = $("#myList li").size();
+    x=1;
+    $('#myList li:lt('+x+')').show();
+    $('#loadMore').click(function () {
+        x= (x+20 <= size_li) ? x+20 : size_li;
+        $('#myList li:lt('+x+')').show();
+    });
+});
+</script>
+
+<!--[if lt IE 9]>
+<style type="text/css">
+.header{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/header-bg.png',sizingMethod='scale');}
+.banner{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/banner-bg.png',sizingMethod='scale');}
+.blue_top{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/blue-top-bg.png',sizingMethod='scale');}
+.footer{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/footer-bg.jpg',sizingMethod='scale');}
+.header_right{width:460px;}
+.main_content_in ul li{width:133px;}
+</style>
+<![endif]-->
+    
+<style>
+    .popup_in p { width:auto; }
+    .show-content { display:block !important; }
+</style>
+
+</head>
+<body>
+        
+<!-- wrapper starts -->
+<div class="wrapper">
+
+
+            <!-- Header Starts -->
+            <div class="banner">
+            <div class="header">
+            	<div class="header_in">
+                	<div class="logo"><a href="#"><img src="images/logo.png" width="180" height="100" alt="logo"></a></div>                    
+                	<div class="header_right">
+                    	<ul>
+                        	<li><a href="#">about</a>
+                            	<ul>
+                                	 <li><a href="#">sublinks</a></li>
+                                     <li><a href="#">sublinks</a></li>
+                                     <li><a href="#">sublinks</a></li>
+                                     <li><a href="#">sublinks</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">winners</a></li>
+                        </ul>
+                        <div class="social_icons">
+                        	<ul>
+                            <li><a href="#"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+                            <li><a href="#"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+                            <li><a href="#"><img src="images/social-icons3.png" width="41" height="40" alt="youtube"></a></li>
+                            <li class="last"><a href="#"><img src="images/social-icons4.png" width="41" height="40" alt="facebook"></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="close1"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="menu"></div>
+            	</div>
+            </div>
+            <div class="team_block">
+            	<h1>Team of the week</h1>
+                <h1 class="mble">Team USA</h1>
+                <div class="team_right">
+                	<h2>Select week</h2>
+                    <select name="" class="select">
+                    	<option>3. week</option>
+                        <option>3. week</option>
+                        <option>3. week</option>
+                        <option>3. week</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+                <div class="team_membars">
+                    <ul>
+                        <li><img src="images/teams-img1.png" width="141" height="141" alt="lopez"><span>Emma Lopez</span> <small>Mae Richardson &amp; Emma Lopez</small></li>
+                        <li><img src="images/teams-img2.png" width="141" height="141" alt="mae"><span>Mae Richardson</span></li>
+                        <li class="txt"><h3>#ShareIstria</h3></li>
+                    </ul>
+                    <ul>
+                        <li><img src="images/teams-img3.png" width="141" height="141" alt="lopez"><span>Emily Ellis</span> <small>Charlie Parker &amp; Emily Ellis</small></li>
+                        <li><img src="images/teams-img4.png" width="141" height="141" alt="mae"><span>Charlie Parker</span></li>
+                        <li class="txt"><h3># Charlie</h3></li>
+                    </ul>
+                    <ul class="last">
+                        <li><img src="images/teams-img5.png" width="141" height="141" alt="lopez"><span>Leroy Bates</span> <small>Leroy Bates &amp; Ana Anić</small></li>
+                        <li class="last"><img src="images/teams-img6.png" width="141" height="141" alt="mae"><span>Ana Anić</span></li>
+                        <li class="txt"><h3># BzvText</h3></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            </div>
+            <!-- Header Ends -->  
+            
+            <!-- Main Content Starts -->
+            <div class="main_content">
+                <div class="main_content_in">
+                    
+                        <!-- content start -->
+                        <div class="popup show-content">
+                            <div class="popup_in two">
+                                <span>12.07.2015. / 09:49 by Emily Ellis</span>
+                                <h2>Aenean bibendum metus a tor bibendum</h2>
+                                <div class="slider">
+                                <ul class="bxslider">
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                    <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
+                                </ul>
+                                <div class="pager">
+                                    <ul class="bx-pager">
+                                        <li><a data-slide-index="0"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="1"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="2"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="3"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="4"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="5"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="img"></a></li>
+                                        <li><a data-slide-index="6"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="img"></a></li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </div></div>
+                                <ul class="mrg">
+                                    <li><a href="#"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+                                    <li><a href="#"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+                                    <li><a href="#"><img src="images/social-icons3.png" width="41" height="40" alt="youtube"></a></li>
+                                    <li class="last"><a href="#"><img src="images/social-icons4.png" width="41" height="40" alt="facebook"></a></li>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <!-- content end -->
+                </div>
+            </div>
+                
+
+            </div>
+            <!-- Main Content Ends --> 
+	
+    		<!-- Footer Starts -->
+           	<div class="footer">
+            	<div class="footer_in">
+                	<div class="brands">
+                    	<ul>
+                        	<li><a href="#"><img src="images/brands-logo1.png" width="201" height="134" alt="logo1"></a></li>
+                            <li><a href="#" class="mid"><img src="images/brands-logo2.png" width="217" height="134" alt="logo2"></a></li>
+                            <li class="last"><a href="#"><img src="images/brands-logo3.png" width="196" height="134" alt="logo3"></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="footer_bottom">
+                    <div class="footer_nav">
+                    	<ul>            
+                        	<li><a href="#">Istra Tourist Board</a></li>
+                            <li><a href="#">info@shareistria.com</a></li>
+                            <li class="last"><a href="#">Privacy Policy</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="footer_btm_rght">
+                    	<span>powered by:</span>
+                        <a href="#"><img src="images/powerd-logo.png" width="281" height="40" alt="logo"></a>
+                    </div>
+                    <div class="clear"></div>
+                    </div>
+                </div>
+            </div> 
+            <!-- Footer Ends -->
+             
+</div>
+<!-- wrapper ends -->
+</body>
+</html>
