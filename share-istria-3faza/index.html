@@ -8,17 +8,21 @@
 
 <!-- SET: STYLESHEET -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
 <link rel="stylesheet" type="text/css" href="css/dd.css">
 <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/flexslider.css">
 <!-- END: STYLESHEET -->
 <!-- SET: SCRIPTS -->
 <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.dd.js"></script>
 <script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function(e) {		
+
+    $(document).ready(function(e) {	
+	$('*').on('click', function(){ return true; });	
 		$("select").msDropdown({roundedBorder:false});
 		
 		$('.bxslider').bxSlider({
@@ -29,13 +33,9 @@
 
     $(".menu").click(function () {
       $('.header_right').toggleClass("list");
-	  $('.header_right').show();
-	  
     });
 	    $(".close1").click(function () {
 		  $('.header_right').removeClass("list");
-		  $('.header_right').hide();
-	  
 		});		
 		
 		
@@ -89,17 +89,66 @@
 			});
 	});
 	
+		$('#carousel1').flexslider({
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 133,
+		itemMargin: 0,
+		asNavFor: '#slider1'
+	  });
+	   
+	  $('#slider1').flexslider({
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		sync: "#carousel1"
+	  });
+
+	
 	$('.main_content_in ul li a.click4').click(function() {
 			  $('.popup5').lightbox_me({
 				  centered: true 
 		   });
+		   
+
+		     
+
 		   e.preventDefault();
 			 $(".close").click(function(){
 			 $('.popup5').trigger('close');
 			});
 	});	
+	
+	$('#carousel').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    itemWidth: 133,
+    itemMargin: 0,
+    asNavFor: '#slider'
+  });
+   
+  $('#slider').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: false,
+    slideshow: false,
+    sync: "#carousel"
+  });
+
+
+
+
 
 	});
+$(window).load(function() {
+  
+});	
+	
 </script>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -110,19 +159,9 @@ $(document).ready(function () {
         x= (x+20 <= size_li) ? x+20 : size_li;
         $('#myList li:lt('+x+')').show();
     });
+	
 });
 </script>
-
-<!--[if lt IE 9]>
-<style type="text/css">
-.header{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/header-bg.png',sizingMethod='scale');}
-.banner{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/banner-bg.png',sizingMethod='scale');}
-.blue_top{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/blue-top-bg.png',sizingMethod='scale');}
-.footer{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/footer-bg.jpg',sizingMethod='scale');}
-.header_right{width:460px;}
-.main_content_in ul li{width:133px;}
-</style>
-<![endif]-->
 
 </head>
 <body>
@@ -175,6 +214,10 @@ $(document).ready(function () {
                         <option>3. week</option>
                         <option>3. week</option>
                         <option>3. week</option>
+                        <option>3. week</option>
+                        <option>3. week</option>
+                        <option>3. week</option>
+                        <option>3. week</option>
                     </select>
                 </div>
                 <div class="clear"></div>
@@ -222,12 +265,12 @@ $(document).ready(function () {
                             <div class="clear"></div>
                             <a href="#">Aenean bibendum metus a tor</a>
                             <ul>
-                            	<li style="display: list-item;"><a href="#" class="click1"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="bibeudum-img1"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click2"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="bibeudum-img2"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click3"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="bibeudum-img3"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click4"><img src="images/bibendum-img4.jpg" width="133" height="139" alt="bibeudum-img4"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click1"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="bibeudum-img5"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click2"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="bibeudum-img6"></a></li>
+                            	<li style="display: list-item;"><a  class="click1"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="bibeudum-img1"></a></li>
+                                <li style="display: list-item;"><a  class="click2"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="bibeudum-img2"></a></li>
+                                <li style="display: list-item;"><a  class="click3"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="bibeudum-img3"></a></li>
+                                <li style="display: list-item;"><a  class="click4"><img src="images/bibendum-img4.jpg" width="133" height="139" alt="bibeudum-img4"></a></li>
+                                <li style="display: list-item;"><a  class="click1"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="bibeudum-img5"></a></li>
+                                <li style="display: list-item;"><a  class="click2"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="bibeudum-img6"></a></li>
                                 <li style="display: list-item;" class="hide"><a href="#" class="click3"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="bibeudum-img7"></a></li>
                                 <li style="display: list-item;" class="hide"><a href="#" class="click4"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="bibeudum-img8"></a></li>
                             </ul>
@@ -246,14 +289,14 @@ $(document).ready(function () {
                         <em>12.07.2015. / 09:49 by Emily Ellis</em>
                         <a href="#">Bibendum metus a tor bibendum</a>
                         <ul>
-                            	<li style="display: list-item;"><a href="#" class="click1"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="bibeudum-img1"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click2"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="bibeudum-img2"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click3"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="bibeudum-img3"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click4"><img src="images/bibendum-img4.jpg" width="133" height="139" alt="bibeudum-img4"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click1"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="bibeudum-img5"></a></li>
-                                <li style="display: list-item;"><a href="#" class="click2"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="bibeudum-img6"></a></li>
-                                <li style="display: list-item;" class="hide"><a href="#" class="click3"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="bibeudum-img7"></a></li>
-                                <li style="display: list-item;" class="hide"><a href="#" class="click4"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="bibeudum-img8"></a></li>
+                            	<li style="display: list-item;"><a  class="click1"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="bibeudum-img1"></a></li>
+                                <li style="display: list-item;"><a  class="click2"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="bibeudum-img2"></a></li>
+                                <li style="display: list-item;"><a  class="click3"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="bibeudum-img3"></a></li>
+                                <li style="display: list-item;"><a  class="click4"><img src="images/bibendum-img4.jpg" width="133" height="139" alt="bibeudum-img4"></a></li>
+                                <li style="display: list-item;"><a  class="click1"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="bibeudum-img5"></a></li>
+                                <li style="display: list-item;"><a  class="click2"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="bibeudum-img6"></a></li>
+                                <li style="display: list-item;" class="hide"><a  class="click3"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="bibeudum-img7"></a></li>
+                                <li style="display: list-item;" class="hide"><a  class="click4"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="bibeudum-img8"></a></li>
                         </ul>
                         <div class="clear"></div>
                         <em class="mae">11.07.2015. / 018:14 by Mae Richardson</em>
@@ -508,9 +551,9 @@ $(document).ready(function () {
         <img src="images/pop-img.jpg" width="803" height="449" alt="pop-img">
         <p>Molestie massa, ut fermentum obortis molestie massa eros auctor vel ermentum obortis molestie massa.Sed lobortis molestie massa, ut fermentum obortis.</p>
         <ul>
-                            <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-                            <li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-                            <li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
                         </ul>
         <div class="clear"></div>
     </div>
@@ -527,9 +570,9 @@ $(document).ready(function () {
         <img src="images/popup-img1.jpg" width="803" height="450" alt="pop-img">
         <p>Molestie massa, ut fermentum obortis molestie massa eros auctor vel ermentum obortis molestie massa.Sed lobortis molestie massa, ut fermentum obortis.Sed lobortis molestie massa, ut fermentum obortis molestie massa eros auctor vel ermentum obortis molestie massa.Sed lobortis molestie massa, ut fermentum obortis molestie massa eros auctor vel ermentum obortis molestie massa.Sed lobortis molestie massa, ut fermentum obortis molestie massa eros auctor vel ermentum obortis molestie massa.</p>
         <ul>
-                            <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-                            <li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-                            <li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
                         </ul>
         <div class="clear"></div>
     </div>
@@ -542,9 +585,9 @@ $(document).ready(function () {
         <h2>Aenean bibendum metus a tor bibendum</h2>
         <span class="video_blck"><img src="images/video-img2.jpg" width="1090" height="710" alt="video-img"><a href="#" class="play_btn1">WATCH VIDEO</a></span>
         <ul class="mrg">
-                            <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-                            <li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-                            <li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
                         </ul>
         <div class="clear"></div>
     </div>
@@ -558,43 +601,6 @@ $(document).ready(function () {
         <h2>Aenean bibendum metus a tor bibendum</h2>
         <span class="video_blck"><img src="images/video-img2.jpg" width="1090" height="710" alt="video-img"><a href="#" class="play_btn1">WATCH VIDEO</a></span>
         <ul class="mrg">
-        	<li><a href="#"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-            <li><a href="#"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-            <li><a href="#"><img src="images/social-icons3.png" width="41" height="40" alt="youtube"></a></li>
-            <li class="last"><a href="#"><img src="images/social-icons4.png" width="41" height="40" alt="facebook"></a></li>
-        </ul>
-        <div class="clear"></div>
-    </div>
-</div>
-
-<div class="popup4">
-	<div class="popup_in two">
-	<div class="close"></div>
-    	<span></span>
-        <h2>Aenean bibendum metus a tor bibendum</h2>
-        <div class="slider">
-        <ul class="bxslider">
-			<li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-		</ul>
-        <div class="pager" >
-        	<ul class="slides">
-            	<li><a data-slide-index="0"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="1"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="2"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="3"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="4"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="5"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="6"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="img"></a></li>
-            </ul>
-            <div class="clear"></div>
-        </div></div>
-        <ul class="mrg">
 <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
 <li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
 <li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
@@ -603,35 +609,177 @@ $(document).ready(function () {
     </div>
 </div>
 
+<div class="popup4main">
+	<div class="popup4">
+	<div class="popup_in two">
+	<div class="close"></div>
+    	<span></span>
+        <h2>Aenean bibendum metus a tor bibendum</h2>
 
+        
+               <div id="slider1" class="flexslider">
+          <ul class="slides">
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+           
+          </ul>
+        </div>
+        <div id="carousel1" class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/bibendum-img1.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+             <img src="images/bibendum-img2.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+              <img src="images/bibendum-img3.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+              <img src="images/bibendum-img5.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+            </li>
+
+            
+          </ul>
+        </div>
+
+        <ul class="mrg">
+<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+                        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+
+<div class="popup5main">
 <div class="popup5">
 	<div class="popup_in two">
 	<div class="close"></div>
     	<span>12.07.2015. / 09:49 by Emily Ellis</span>
         <h2>Aenean bibendum metus a tor bibendum</h2>
-        <div class="slider">
-        <ul class="bxslider">
-			<li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-            <li><span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span></li>
-		</ul>
-        <div class="pager">
-        	<ul class="bx-pager">
-            	<li><a data-slide-index="0"><img src="images/bibendum-img1.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="1"><img src="images/bibendum-img2.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="2"><img src="images/bibendum-img3.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="3"><img src="images/bibendum-img5.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="4"><img src="images/bibendum-img6.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="5"><img src="images/bibendum-img7.jpg" width="133" height="139" alt="img"></a></li>
-                <li><a data-slide-index="6"><img src="images/bibendum-img8.jpg" width="133" height="139" alt="img"></a></li>
-            </ul>
-            <div class="clear"></div>
-        </div></div>
-        <ul class="mrg">
+
+        
+       <div id="slider" class="flexslider">
+          <ul class="slides">
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+            <li>
+              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+            </li>
+           
+          </ul>
+        </div>
+        <div id="carousel" class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/bibendum-img1.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+             <img src="images/bibendum-img2.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+              <img src="images/bibendum-img3.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+              <img src="images/bibendum-img5.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+            </li>
+            <li>
+            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+            </li>
+
+            
+          </ul>
+        </div>
+        
+       <ul class="mrg">
 <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
 <li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
 <li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
@@ -639,8 +787,7 @@ $(document).ready(function () {
         <div class="clear"></div>
     </div>
 </div>
-
-<!-- Popup Ends -->
+</div>
 
 </body>
 </html>

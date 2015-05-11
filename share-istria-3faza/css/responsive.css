@@ -38,6 +38,9 @@ a.play_btn						{ left:107px; top:110px;}
 .popup_in.two .bx-wrapper .bx-controls-direction a{ background-size:100% 100%; width:30px !important; height:100px !important; margin:0 !important; top:100.2% !important;}
 
 a.play_btn1						{ left:280px; top:220px;}
+#carousel						{width:83%;}
+#carousel1						{width:83%;}
+
 }
 
 
@@ -135,6 +138,8 @@ a.load_more						{ margin:29px auto 0 auto;}
 .pager ul li a img				{ width:73px !important; height:auto;}
 .popup_in.two .bx-wrapper .bx-controls-direction a{ background-size:100% 100%; width:30px !important; height:75px !important; margin:0 !important;}
 a.play_btn1						{ left:195px; top:175px;}
+#carousel						{width:79%;}
+#carousel1						{width:79%;}
 
 }
 
@@ -184,7 +189,8 @@ a.play_btn1						{ left:195px; top:175px;}
 .right_blog						{ width:570px; float:none; margin:0 auto;}
 .main_content_in ul li:nth-child(4)	{ margin:0 0 5px 0;}
 .main_content_in ul li:nth-child(8)	{ margin:0 0 5px 0;}
-
+#carousel						{width:74%;}
+#carousel1						{width:79%;}
 
 
 .karta_block_in					{ width:570px;}
@@ -267,8 +273,10 @@ a.play_btn1						{ left:155px; top:145px;}
 .headding						{ margin:0 0 35px 0;}
 .headding h2.team				{ padding:0; float:left;}
 .headding h2					{ width:180px; float:right; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px;}
+#carousel						{width:65%;}
+#carousel1						{width:65%;}
 
-
+.flexslider .slides img			{margin:0 !important;}
 .main_content_in ul li a img	{ width:125px; height:auto;}
 .main_content_in span img		{ width:390px; height:auto;}
 .main_content_in h3				{ font-size:25px; line-height:25px;}
@@ -279,7 +287,7 @@ a.play_btn1						{ left:155px; top:145px;}
 .main_content_in ul li.hide		{ display:none !important;}
 
 .team_membars ul li.txt			{ top:16px; left:87px;}
-a.play_btn						{ width:125px; font-size:12px; line-height:13px !important; padding:14px 0 14px 20px !important; background-position:114px center; background-size:9% 50%; left:115px; top:90px;}
+a.play_btn						{ width:125px; font-size:12px !important; line-height:13px !important; padding:14px 0 14px 20px !important; background-position:114px center; background-size:9% 50%; left:115px; top:90px;}
 
 
 .left_blog						{ width:390px; float:none; margin:0 auto; padding:0; display:none;}
@@ -366,6 +374,10 @@ a.play_btn1						{ width:150px; left:95px; top:105px; padding:10px 0 13px 16px !
 .team_membars ul li img			{ width:45px; height:auto;}
 .team_membars ul li span		{ display:none;}
 .team_membars ul li small		{ width:205px; position:absolute; left:93px; top:0; font-family: 'whitney_blackregular'; font-size:15px; font-weight:normal; color:#ffffff; display:block; padding:0; margin:0; line-height:15px;}
+#carousel						{width:56%;}
+#carousel1						{width:56%;}
+
+.flexslider .slides img			{margin:0 !important;}
 
 
 .main_content_in				{ width:300px; padding:50px 0 52px;}
