@@ -199,7 +199,7 @@ a.play_btn									{ width:190px; position:absolute; left:166px; top:149px; back
 .popup_in p									{ font-family: 'Conv_ufonts.com_whitney-book'; font-size:25px; font-weight:normal; color:#3e3e3e; line-height:32px; padding:0 0 30px 0;}
 .popup_in img								{ margin:0 0 33px 0;}
 .popup_in ul								{ float:right; display:inline-block; padding:65px 0 0 0; margin:0;}
-.popup_in ul li								{ float:left; display:inline-block; padding:0; margin:0 10px 0 0 !important;}
+.popup_in ul li								{ float:left; display:inline-block; padding:0;}
 .popup_in ul li a							{ display:block; padding:0; margin:0;}
 .popup_in ul li a img						{ margin:0;}
 .close										{ position:absolute; top:40px; right:40px;  background:url(../images/close-btn.png) no-repeat right top; width:44px; height:44px; display:block; cursor:pointer;}
@@ -208,7 +208,7 @@ a.play_btn									{ width:190px; position:absolute; left:166px; top:149px; back
 .popup2										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
 .popup3										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:none;}
 .popup4										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative; display:block;}
-.popup5main									{height:0; overflow:hidden; }
+.popup5main									{height:0; overflow: hidden; }
 .popup4main									{height:0; overflow:hidden; }
 
 .popup5										{ width:1170px; background:url(../images/pop-img.png) no-repeat;  margin:0 auto; position:relative;}
@@ -235,20 +235,28 @@ a.play_btn									{ width:190px; position:absolute; left:166px; top:149px; back
 
 a.play_btn1									{ width:190px; position:absolute; left:465px; top:300px; background:url(../images/arrow.png) no-repeat 170px center #009fe2; font-family: 'whitney_blackregular';  font-size:20px; font-weight:normal; color:#ffffff !important; text-decoration:none !important; padding:16px 0 20px 26px !important; border-radius:30px; line-height:20px !important;}
 .slider .bx-wrapper .bx-viewport			{ height:100% !important;}
-.popup5main.flexslider {margin:0 !important;}
+.popup5main.flexslider 						{margin:0 !important;}
 
-#carousel								{width:87%; margin:0 auto;}
-#carousel ul li								{margin:0 5px 0 0 !important;}						
+#carousel									{width:87%; margin:0 auto;}
+#carousel ul li								{margin-right: 5px;}
 #slider	ul li								{margin:0 !important;}
-#slider	.flex-direction-nav .flex-next 	{display:none;}
-#slider	.flex-direction-nav .flex-prev{display:none;}
-.popup4 .popup_in ul					{ float:none; padding:0;} 
+#slider	.flex-direction-nav .flex-next 		{display:none;}
+#slider	.flex-direction-nav .flex-prev		{display:none;}
+.popup4 .popup_in ul						{ float:none; padding:0;}
 
-#carousel1								{width:87%; margin:0 auto;}
-#carousel1 ul li								{margin:0 5px 0 0 !important;}						
+#carousel1									{width:87%; margin:0 auto;}
+#carousel1 ul li							{margin-right: 5px;}
 #slider1 ul li								{margin:0 !important;}
 #slider1 .flex-direction-nav .flex-next 	{display:none;}
-#slider1 .flex-direction-nav .flex-prev{display:none;}
+#slider1 .flex-direction-nav .flex-prev		{display:none;}
+
+.austria-flag								{ background: url(../images/austria.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; }
+.denmark-flag 								{ background: url(../images/denmark.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; }
+.finland-flag 								{ background: url(../images/finland.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; }
+.france-flag 								{ background: url(../images/france.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; }
+.hungary-flag								{ background: url(../images/hungary.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; }
+.norway-flag								{ background: url(../images/norway.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; }
+.singapore-flag								{ background: url(../images/singapore.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; }
 
 
 

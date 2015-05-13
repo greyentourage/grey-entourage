@@ -141,6 +141,14 @@ a.play_btn1						{ left:195px; top:175px;}
 #carousel						{width:79%;}
 #carousel1						{width:79%;}
 
+	.austria-flag				{ background: url(../images/austria.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px;}
+	.denmark-flag 				{ background: url(../images/denmark.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px;}
+	.finland-flag 				{ background: url(../images/finland.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.france-flag 				{ background: url(../images/france.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.hungary-flag				{ background: url(../images/hungary.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.norway-flag				{ background: url(../images/norway.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.singapore-flag				{ background: url(../images/singapore.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+
 }
 
 
@@ -181,8 +189,8 @@ a.play_btn1						{ left:195px; top:175px;}
 
 .main_content_in				{ width:570px;}
 .headding						{ width:400px; margin:0 auto 35px auto;}
-.headding h2.team				{ padding:0; float:left;}
-.headding h2					{ width:180px; float:right; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px;}
+.headding h2.team				{ padding:0; float: right; }
+.headding h2					{ width:180px; float:left; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px; cursor: pointer; }
 .main_content_in span img		{ width:100%; height:auto;}
 .main_content_in ul li a img	{ width:138px; height:auto;}
 .left_blog						{ width:570px; float:none; margin:0 auto; border:none;}
@@ -190,7 +198,7 @@ a.play_btn1						{ left:195px; top:175px;}
 .main_content_in ul li:nth-child(4)	{ margin:0 0 5px 0;}
 .main_content_in ul li:nth-child(8)	{ margin:0 0 5px 0;}
 #carousel						{width:74%;}
-#carousel1						{width:79%;}
+#carousel1						{width:74%;}
 
 
 .karta_block_in					{ width:570px;}
@@ -231,6 +239,15 @@ a.play_btn1						{ left:195px; top:175px;}
 .popup_in.two .bx-wrapper .bx-controls-direction a{ background-size:100% 100%; width:19px !important; height:62px !important; margin:0 !important; top:100.2% !important;}
 a.play_btn1						{ left:155px; top:145px;}
 .popup_in span.video_blck		{ padding:0 0 20px 0 !important;}
+
+	.austria-flag				{ background: url(../images/austria.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px;}
+	.denmark-flag 				{ background: url(../images/denmark.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px;}
+	.finland-flag 				{ background: url(../images/finland.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.france-flag 				{ background: url(../images/france.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.hungary-flag				{ background: url(../images/hungary.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.norway-flag				{ background: url(../images/norway.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+	.singapore-flag				{ background: url(../images/singapore.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 37px 37px; }
+
 }
 
 @media only screen and (min-width:420px) and (max-width:589px){
@@ -271,8 +288,8 @@ a.play_btn1						{ left:155px; top:145px;}
 
 .main_content_in				{ width:390px; padding:50px 0 70px;}
 .headding						{ margin:0 0 35px 0;}
-.headding h2.team				{ padding:0; float:left;}
-.headding h2					{ width:180px; float:right; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px;}
+.headding h2.team				{ padding:0; float: right; }
+.headding h2					{ width:180px; float:left; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px; cursor: pointer; }
 #carousel						{width:65%;}
 #carousel1						{width:65%;}
 
@@ -283,15 +300,15 @@ a.play_btn1						{ left:155px; top:145px;}
 .main_content_in em				{ font-size:15px;}
 .main_content_in a				{ font-size:15px;}
 .main_content_in h4				{ font-size:25px; line-height:27px;}
-.main_content_in p				{ font-size:20px; width:300px; line-height:22px;}
+.main_content_in p				{ font-size:20px; width:400px; line-height:22px;}
 .main_content_in ul li.hide		{ display:none !important;}
 
 .team_membars ul li.txt			{ top:16px; left:87px;}
 a.play_btn						{ width:125px; font-size:12px !important; line-height:13px !important; padding:14px 0 14px 20px !important; background-position:114px center; background-size:9% 50%; left:115px; top:90px;}
 
 
-.left_blog						{ width:390px; float:none; margin:0 auto; padding:0; display:none;}
-.right_blog						{ width:390px; float:none; margin:0 auto; padding:0;}
+.left_blog						{ width:390px; float:none; margin:0 auto; padding:0; border-right: none; }
+.right_blog						{ width:390px; float:none; margin:0 auto; padding:0; display:none;}
 
 .load_more						{ width:200px; font-size:18px; padding:12px 0; margin:20px auto 0;}
 
@@ -329,14 +346,22 @@ a.play_btn						{ width:125px; font-size:12px !important; line-height:13px !impo
 .popup3							{ width:100%;}
 .popup4							{ width:100%;}
 .popup5							{ width:100%;}
-.popup_in.two					{ width:390px;}
-.slider ul li					{ width:390px !important; }
+.popup_in.two					{ width:420px;}
+.slider ul li					{ width:420px !important; }
 
 .pager ul						{ width:343px !important;}
 .pager ul li					{ width:44px !important;}
 .pager ul li a img				{ width:44px !important; height:auto;}
 .popup_in.two .bx-wrapper .bx-controls-direction a{ background-size:100% 100%; width:19px !important; height:46px !important; margin:0 !important; top:100.2% !important;}
 a.play_btn1						{ width:150px; left:95px; top:105px; padding:10px 0 13px 16px !important; background-position:130px center; font-size:15px;}
+
+	.austria-flag				{ background: url(../images/austria.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px;}
+	.denmark-flag 				{ background: url(../images/denmark.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px;}
+	.finland-flag 				{ background: url(../images/finland.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px; }
+	.france-flag 				{ background: url(../images/france.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px; }
+	.hungary-flag				{ background: url(../images/hungary.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px; }
+	.norway-flag				{ background: url(../images/norway.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px; }
+	.singapore-flag				{ background: url(../images/singapore.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 16px 16px; }
 
 }
 
@@ -374,16 +399,24 @@ a.play_btn1						{ width:150px; left:95px; top:105px; padding:10px 0 13px 16px !
 .team_membars ul li img			{ width:45px; height:auto;}
 .team_membars ul li span		{ display:none;}
 .team_membars ul li small		{ width:205px; position:absolute; left:93px; top:0; font-family: 'whitney_blackregular'; font-size:15px; font-weight:normal; color:#ffffff; display:block; padding:0; margin:0; line-height:15px;}
-#carousel						{width:56%;}
-#carousel1						{width:56%;}
+#carousel						{width:77%; margin:0 auto;}
+#carousel ul li					{ width: 60px !important; }
+#carousel .flex-direction-nav .flex-prev { background-size: 25px 68px; width: 25px; height: 63px; left: -30px; }
+#carousel .flex-direction-nav .flex-next { background-size: 25px 68px; width: 25px; height: 63px; right: -30px; }
+#carousel ul li img 			{ width: 60px !important; }
+#carousel1						{width:77%; margin:0 auto;}
+#carousel1 ul li				{ width: 60px !important; }
+#carousel1 .flex-direction-nav .flex-prev { background-size: 25px 68px; width: 25px; height: 63px; left: -30px; }
+#carousel1 .flex-direction-nav .flex-next { background-size: 25px 68px; width: 25px; height: 63px; right: -30px; }
+#carousel1 ul li img 			{ width: 60px !important; }
 
 .flexslider .slides img			{margin:0 !important;}
 
 
 .main_content_in				{ width:300px; padding:50px 0 52px;}
 .headding						{ margin:0 0 40px 0;}
-.headding h2.team				{ padding:0; float:left;}
-.headding h2					{ width:140px; float:right; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px;}
+.headding h2.team				{ padding:0; float: right; }
+.headding h2					{ width:140px; float:left; font-size:16px; color:#009fe2; border:solid 1px #009fe2; padding:0; text-align:center; border-radius:30px; text-transform:uppercase; line-height:35px; cursor: pointer; }
 
 .main_content_in ul li:nth-child(3)	{ margin:0 0 5px 0;}
 .main_content_in ul li:nth-child(6)	{ margin:0 0 5px 0;}
@@ -401,8 +434,8 @@ a.play_btn1						{ width:150px; left:95px; top:105px; padding:10px 0 13px 16px !
 a.play_btn						{ width:125px; font-size:12px !important; line-height:12px !important; padding:14px 0 12px 20px !important; background-position:114px center; background-size:9% 50%; left:85px; top:90px;}
 
 
-.left_blog						{ width:300px; float:none; margin:0 auto; padding:0; display:none;}
-.right_blog						{ width:300px; float:none; margin:0 auto; padding:0;}
+.left_blog						{ width:300px; float:none; margin:0 auto; padding:0; border-right: none; }
+.right_blog						{ width:300px; float:none; margin:0 auto; padding:0; display:none;}
 
 .load_more						{ width:200px; font-size:18px; padding:12px 0; margin:20px auto 0;}
 
@@ -413,8 +446,8 @@ a.play_btn						{ width:125px; font-size:12px !important; line-height:12px !impo
 .day h2							{ font-size:25px; padding:0 0 30px; line-height:25px;}
 .day p							{ font-size:20px; line-height:22px;}
 .map							{ width:300px; margin:0 auto 50px auto; float:none; display:block;}
-.map a img						{ width:300px; height:auto;}				
-.blue_top						{ background-size:cover;}		
+.map a img						{ width:300px; height:auto;}
+.blue_top						{ background-size:cover;}
 .blue_btoom						{ background-size:cover;}
 
 
@@ -435,6 +468,8 @@ a.play_btn						{ width:125px; font-size:12px !important; line-height:12px !impo
 .popup_in img					{ width:300px; height:auto; margin:15px auto; display:block;}
 .popup_in p						{ font-size:20px; line-height:20px; padding:0;}
 .popup_in ul li a img			{ width:auto; }
+.popup_in h2					{ font-size: 18px; line-height: 20px; padding: 0 0 20px 0; }
+.popup_in span					{ font-size: 10px; }
 .close							{ right:10px; top:33px; width:34px; height:34px; background-size:100% 100%;}
 .popup1							{ width:100%;}
 .popup2							{ width:100%;}
@@ -442,8 +477,8 @@ a.play_btn						{ width:125px; font-size:12px !important; line-height:12px !impo
 .popup4							{ width:100%;}
 .popup5							{ width:100%;}
 
-.popup_in.two					{ width:300px;}
-.slider ul li					{ width:300px !important; }
+.popup_in.two					{ width:95%;}
+.slider ul li					{ width:95% !important; }
 .pager ul						{ width:245px !important;}
 .pager ul li					{ width:30px !important;}
 .pager ul li a img				{ width:30px !important; height:auto;}
@@ -452,6 +487,14 @@ a.play_btn						{ width:125px; font-size:12px !important; line-height:12px !impo
 
 .load_main						{ width:300px;}
 a.play_btn1						{ width:150px; left:65px; top:78px; padding:10px 0 13px 16px !important; background-position:130px center; font-size:15px;}
+
+	.austria-flag				{ background: url(../images/austria.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px;}
+	.denmark-flag 				{ background: url(../images/denmark.png) no-repeat left top; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px;}
+	.finland-flag 				{ background: url(../images/finland.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px; }
+	.france-flag 				{ background: url(../images/france.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px; }
+	.hungary-flag				{ background: url(../images/hungary.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px; }
+	.norway-flag				{ background: url(../images/norway.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px; }
+	.singapore-flag				{ background: url(../images/singapore.png) no-repeat left top; ; width: 42px; height: 42px; position: absolute; top: 0; display: block !important; background-size: 15px 15px; }
 
 }
 

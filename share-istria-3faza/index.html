@@ -21,134 +21,157 @@
 <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
 <script type="text/javascript">
 
-    $(document).ready(function(e) {	
-	$('*').on('click', function(){ return true; });	
+    $(document).ready(function(e) {
+		$('*').on('click', function(){ return true; });
 		$("select").msDropdown({roundedBorder:false});
-		
-		$('.bxslider').bxSlider({
-		  pagerCustom: '.bx-pager',
-		  auto:true,
+
+		$(window).resize(function() {
+			menuClick();
+			var itemwidth = getItemWidth();
+			flexslider.vars.itemWidth = itemwidth;
+		});
+
+		$(".menu").click(function () {
+			$('.header_right').toggleClass("list");
+		});
+		$(".close1").click(function () {
+			$('.header_right').removeClass("list");
 		});
 
 
-    $(".menu").click(function () {
-      $('.header_right').toggleClass("list");
-    });
-	    $(".close1").click(function () {
-		  $('.header_right').removeClass("list");
-		});		
-		
-		
-		
-	$('.main_content_in ul li a.click1').click(function() {
-			  $('.popup').lightbox_me({
-				  centered: true 
-		   });
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup').trigger('close');
+
+		$('.main_content_in ul li a.click1').click(function(e) {
+			$('.popup').lightbox_me({
+				centered: true
 			});
-	});
-	
-	$('.main_content_in ul li a.click2').click(function() {
-			  $('.popup1').lightbox_me({
-				  centered: true 
-		   });
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup1').trigger('close');
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup').trigger('close');
 			});
-	});
-	$('a.play_btn').click(function() {
-			  $('.popup2').lightbox_me({
-				  centered: true 
-		   });
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup2').trigger('close');
+		});
+
+		$('.main_content_in ul li a.click2').click(function(e) {
+			$('.popup1').lightbox_me({
+				centered: true
 			});
-	});
-	
-	$('a.play_btn').click(function() {
-			  $('.popup3').lightbox_me({
-				  centered: true 
-		   });
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup3').trigger('close');
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup1').trigger('close');
 			});
-	});
-	
-	$('.main_content_in ul li a.click3').click(function() {
-			  $('.popup4').lightbox_me({
-				  centered: true 
-		   });
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup4').trigger('close');
+		});
+		$('a.play_btn').click(function(e) {
+			$('.popup2').lightbox_me({
+				centered: true
 			});
-	});
-	
-		$('#carousel1').flexslider({
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 133,
-		itemMargin: 0,
-		asNavFor: '#slider1'
-	  });
-	   
-	  $('#slider1').flexslider({
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		sync: "#carousel1"
-	  });
-
-	
-	$('.main_content_in ul li a.click4').click(function() {
-			  $('.popup5').lightbox_me({
-				  centered: true 
-		   });
-		   
-
-		     
-
-		   e.preventDefault();
-			 $(".close").click(function(){
-			 $('.popup5').trigger('close');
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup2').trigger('close');
 			});
-	});	
-	
-	$('#carousel').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemWidth: 133,
-    itemMargin: 0,
-    asNavFor: '#slider'
-  });
-   
-  $('#slider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    sync: "#carousel"
-  });
+		});
 
+		$('a.play_btn').click(function(e) {
+			$('.popup3').lightbox_me({
+				centered: true
+			});
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup3').trigger('close');
+			});
+		});
 
+		$('.main_content_in ul li a.click3').click(function(e) {
+			$('.popup4').lightbox_me({
+				centered: true,
+				onLoad: function() {
+					initFlexModal1();
+				}
+			});
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup4').trigger('close');
+			});
+		});
 
+		$('.main_content_in ul li a.click4').click(function(e) {
+			$('.popup5').lightbox_me({
+				centered: true,
+				onLoad: function() {
+					initFlexModal();
+				}
+			});
+			e.preventDefault();
+			$(".close").click(function(){
+				$('.popup5').trigger('close');
+			});
+		});
 
+		function initFlexModal1() {
+			$('#carousel1').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: getItemWidth(),
+				itemMargin: 5,
+				asNavFor: '#slider1'
+			});
+			$('#slider1').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: "#carousel1"
+			});
+		}
 
+		function initFlexModal() {
+			$('#carousel').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: getItemWidth(),
+				itemMargin: 5,
+				asNavFor: '#slider'
+			});
+
+			$('#slider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: "#carousel"
+			});
+		}
+
+		function getItemWidth() {
+			return (window.innerWidth <= 419) ? 60 : 135;
+		}
+
+		function menuClick() {
+			if (window.innerWidth < 767) {
+				$('#news_tab').click(function () {
+					$('.left_blog').show();
+					$('.right_blog').hide();
+				});
+
+				$('#team_activity_tab').click(function () {
+					$('.right_blog').show();
+					$('.left_blog').hide();
+				});
+			}
+			else {
+				$('#news_tab').unbind("click");
+				$('#team_activity_tab').unbind("click");
+				$('.left_blog').show();
+				$('.right_blog').show();
+			}
+		}
+
+		initFlexModal1();
+		initFlexModal();
+		menuClick();
 	});
-$(window).load(function() {
-  
-});	
-	
 </script>
 <script type="text/javascript">
 $(document).ready(function () {
@@ -223,18 +246,18 @@ $(document).ready(function () {
                 <div class="clear"></div>
                 <div class="team_membars">
                     <ul>
-                        <li><img src="images/teams-img1.png" width="141" height="141" alt="lopez"><span>Emma Lopez</span> <small>Mae Richardson &amp; Emma Lopez</small></li>
-                        <li><img src="images/teams-img2.png" width="141" height="141" alt="mae"><span>Mae Richardson</span></li>
+                        <li><img src="images/teams-img1.png" width="141" height="141" alt="mae"><span class="austria-flag"></span><span>Emma Lopez</span> <small>Mae Richardson &amp; Emma Lopez</small></li>
+                        <li><img src="images/teams-img2.png" width="141" height="141" alt="emma"><span class="denmark-flag"></span><span>Mae Richardson</span></li>
                         <li class="txt"><h3>#ShareIstria</h3></li>
                     </ul>
                     <ul>
-                        <li><img src="images/teams-img3.png" width="141" height="141" alt="lopez"><span>Emily Ellis</span> <small>Charlie Parker &amp; Emily Ellis</small></li>
-                        <li><img src="images/teams-img4.png" width="141" height="141" alt="mae"><span>Charlie Parker</span></li>
+                        <li><img src="images/teams-img3.png" width="141" height="141" alt="emilly"><span class="finland-flag"></span><span>Emily Ellis</span> <small>Charlie Parker &amp; Emily Ellis</small></li>
+                        <li><img src="images/teams-img4.png" width="141" height="141" alt="charlie"><span class="france-flag"></span><span>Charlie Parker</span></li>
                         <li class="txt"><h3># Charlie</h3></li>
                     </ul>
                     <ul class="last">
-                        <li><img src="images/teams-img5.png" width="141" height="141" alt="lopez"><span>Leroy Bates</span> <small>Leroy Bates &amp; Ana Anić</small></li>
-                        <li class="last"><img src="images/teams-img6.png" width="141" height="141" alt="mae"><span>Ana Anić</span></li>
+                        <li><img src="images/teams-img5.png" width="141" height="141" alt="leroy"><span class="hungary-flag"></span><span>Leroy Bates</span> <small>Leroy Bates &amp; Ana Anić</small></li>
+                        <li class="last"><img src="images/teams-img6.png" width="141" height="141" alt="ana"><span class="norway-flag"></span><span>Ana Anić</span></li>
                         <li class="txt"><h3># BzvText</h3></li>
                     </ul>
                     <div class="clear"></div>
@@ -247,8 +270,8 @@ $(document).ready(function () {
             <div class="main_content">
                 <div class="main_content_in">
                 	<div class="headding">
-                    	<h2>News</h2>
-                    	<h2 class="team">Team Activity</h2>
+                    	<h2 id="news_tab">News</h2>
+                    	<h2 id="team_activity_tab" class="team">Team Activity</h2>
                         <div class="clear"></div>
                     </div>
                     
@@ -611,182 +634,181 @@ $(document).ready(function () {
 
 <div class="popup4main">
 	<div class="popup4">
-	<div class="popup_in two">
-	<div class="close"></div>
-    	<span></span>
-        <h2>Aenean bibendum metus a tor bibendum</h2>
+		<div class="popup_in two">
+			<div class="close"></div>
+			<span></span>
+			<h2>Aenean bibendum metus a tor bibendum</h2>
 
-        
-               <div id="slider1" class="flexslider">
-          <ul class="slides">
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-           
-          </ul>
-        </div>
-        <div id="carousel1" class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="images/bibendum-img1.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-             <img src="images/bibendum-img2.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-              <img src="images/bibendum-img3.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-              <img src="images/bibendum-img5.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
-            </li>
+			<div id="slider1" class="flexslider">
+				<ul class="slides">
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
 
-            
-          </ul>
-        </div>
+				</ul>
+			</div>
+			<div id="carousel1" class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="images/bibendum-img1.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img2.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img3.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img5.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
+					</li>
 
-        <ul class="mrg">
-<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
-                        </ul>
-        <div class="clear"></div>
-    </div>
-</div>
+
+				</ul>
+			</div>
+
+			<ul class="mrg">
+				<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+				<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+				<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
 </div>
 
 <div class="popup5main">
-<div class="popup5">
-	<div class="popup_in two">
-	<div class="close"></div>
-    	<span>12.07.2015. / 09:49 by Emily Ellis</span>
-        <h2>Aenean bibendum metus a tor bibendum</h2>
+	<div class="popup5">
+		<div class="popup_in two">
+			<div class="close"></div>
+			<span>12.07.2015. / 09:49 by Emily Ellis</span>
+			<h2>Aenean bibendum metus a tor bibendum</h2>
 
-        
-       <div id="slider" class="flexslider">
-          <ul class="slides">
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-            <li>
-              <span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
-            </li>
-           
-          </ul>
-        </div>
-        <div id="carousel" class="flexslider">
-          <ul class="slides">
-            <li>
-              <img src="images/bibendum-img1.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-             <img src="images/bibendum-img2.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-              <img src="images/bibendum-img3.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-              <img src="images/bibendum-img5.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img6.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img7.jpg" width="133" height="139" alt="img">
-            </li>
-            <li>
-            <img src="images/bibendum-img8.jpg" width="133" height="139" alt="img">
-            </li>
 
-            
-          </ul>
-        </div>
-        
-       <ul class="mrg">
-<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
-<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
-<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
-                        </ul>
-        <div class="clear"></div>
-    </div>
-</div>
+			<div id="slider" class="flexslider">
+				<ul class="slides">
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+					<li>
+						<span class="video_blck"><img src="images/video-img2.jpg" width="100%" height="710" alt="video-img"></span>
+					</li>
+
+				</ul>
+			</div>
+			<div id="carousel" class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="images/bibendum-img1.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img2.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img3.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img5.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img6.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img7.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img8.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img6.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img7.jpg" alt="img">
+					</li>
+					<li>
+						<img src="images/bibendum-img8.jpg" alt="img">
+					</li>
+
+
+				</ul>
+			</div>
+
+			<ul class="mrg">
+				<li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="images/social-icons1.png" width="41" height="40" alt="facebook"></a></li>
+				<li><a href="http://twitter.com/home?status=Share%20Istria!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="images/social-icons2.png" width="41" height="40" alt="twitter"></a></li>
+				<li class="last"><a href="https://plus.google.com/share?url=I’m%20applying%20for%20free%20trip%20to%20%23Istria!%20Vote%20for%20me%20and%20help%20me%20win!%20%23ShareIstria%20http://www.shareistria.com/content-url" onclick="return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="images/google_plus.png" width="41" height="40" alt="facebook"></a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
 </div>
 
 </body>
