@@ -409,15 +409,20 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     background:url(../img/ico-smiley-big.png) no-repeat 50% 50%;
     background-size:100% 100%;
 }
-.page-content--emoji .bubble--first::after { display:none; }
 .bubble--first h1 { font-size:2.8rem; }
 .bubble--first p { font-size:1.8rem; }
 
 /* emoji */
-.emoji-set1-1 { width:32rem; }
-.emoji-set1-2 { width:18rem; }
-.emoji-set1-3 { width:12rem; }
-.emoji-set1-4 { width:22rem; }
+.page-content--emoji .bubble--first { margin-bottom:6rem; }
+.page-content--emoji .bubble--first::before {
+    bottom:-4rem;
+    right:-100rem;
+}
+.page-content--emoji .bubble--first::after { display:none; }
+.emoji-set1-1 { width:15rem; }
+.emoji-set1-2 { width:10rem; }
+.emoji-set1-3 { width:6rem; }
+.emoji-set1-4 { width:18rem; }
 
 
 /* second bubble */
@@ -542,7 +547,7 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     display:table;
     width:27rem;
     height:27rem;
-    padding:0 2rem;
+    padding:0 4rem;
 }
 .bubble--fifth::before {
     width:100%;
@@ -666,6 +671,11 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
         right:70%;       
     }
     
+    .emoji-set1-1 { width:18.5rem; }
+    .emoji-set1-2 { width:13rem; }
+    .emoji-set1-3 { width:8rem; }
+    .emoji-set1-4 { width:20rem; }
+    
     .page-footer .inner { padding-top:2rem; }
     .page-footer::before {
         top:7rem;
@@ -738,9 +748,10 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     
     .page-content--emoji .bubble--fourth { margin-bottom:6rem; }
     
-    .emoji-set1-1 { width:38rem; }
-    .emoji-set1-2 { width:18rem; }
-    .emoji-set1-3 { width:14rem; }
+    .emoji-set1-1 { width:22rem; }
+    .emoji-set1-2 { width:14rem; }
+    .emoji-set1-3 { width:8rem; }
+    .emoji-set1-4 { width:23rem; }
     
     .emoji-set1-2 + br { display:none; }
     
@@ -762,7 +773,11 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     .page-content--emoji .bubble--third,
     .page-content--emoji .bubble--fourth { margin-bottom:4rem; }
     
-    .emoji-set1-4 { width:30rem; }
+    .emoji-set1-1 { width:24.5rem; }
+    .emoji-set1-2 { width:17rem; }
+    .emoji-set1-3 { width:9rem; }
+    .emoji-set1-4 { width:28rem; }
+    
     .emoji-set6-1 { width:38rem; }
     .emoji-set6-2 { width:30rem; }
     .emoji-set6-3 { width:40rem; }
@@ -775,10 +790,11 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     .bubble--first { padding-bottom:6rem; }
     .bubble--first::before { right:-100rem; }
     
-    .emoji-set1-1 { width:40rem; }
-    .emoji-set1-2 { width:20rem; }
-    .emoji-set1-3 { width:16rem; }
-    .emoji-set1-4 { width:32rem; }
+    .emoji-set1-1 { width:26.5rem; }
+    .emoji-set1-2 { width:19rem; }
+    .emoji-set1-3 { width:11rem; }
+    .emoji-set1-4 { width:30rem; }
+    
     .emoji-set6-1 { width:42rem; }
     .emoji-set6-2 { width:36rem; }
     .emoji-set6-3 { width:46rem; }
@@ -858,6 +874,8 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     .page-content--emoji .bubble--fourth,
     .page-content--emoji .bubble--second,
     .page-content--emoji .bubble--third { margin-bottom:-4rem; }
+    
+    .page-content--emoji .bubble--first::before { right:-90rem; }
     
     .emoji-set1-1 { width:32rem; }
     .emoji-set1-1 + br { display:none; }
@@ -971,7 +989,9 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     .page-content--emoji .bubble--second,
     .page-content--emoji .bubble--third { margin-bottom:0; }
     
-    .emoji-set1-1 { width:38rem; }
+    .page-content--emoji .bubble--first::before { right:-80rem; }
+    
+    .emoji-set1-1 { width:37.5rem; }
     .emoji-set1-2 { width:24rem; }
     .emoji-set1-3,
     .emoji-set1-4,
@@ -1190,7 +1210,7 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     .inner,
     .page-content { padding:0 6rem; }
     
-    .bubble--first { padding-left:30rem; }
+    .bubble--first { padding-left:32rem; }
     .bubble--first::after {
         width:20rem;
         height:20rem;
