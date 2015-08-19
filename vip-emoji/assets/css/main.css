@@ -123,8 +123,8 @@ img { max-width:100%; }
     width:100vw;
     height:100vh;
     background-color:#ffb300;
-    -webkit-animation:preloader-color-change 5s alternate infinite;
-    animation:preloader-color-change 5s alternate infinite;
+    -webkit-animation:preloader-color-change 3s alternate infinite;
+    animation:preloader-color-change 3s alternate infinite;
 }
 #status {
     position:absolute;
@@ -1142,9 +1142,15 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
 /* 1000 px */
 @media only screen and (min-width: 1000px) {
  
+    .bubble--first { margin-bottom:2rem; }
+    .bubble--second { margin-bottom:-24rem; }
+    .bubble--third { margin-bottom:-14rem; }
+    .bubble--fourth { margin-bottom:-18rem; }
+    
+    .page-content--emoji .bubble--first { margin-bottom:-4rem; }
     .page-content--emoji .bubble--second { margin-bottom:-20rem; }
     .page-content--emoji .bubble--third { margin-bottom:-8rem; }
-    .page-content--emoji .bubble--fourth { margin-bottom:-14rem; }
+    .page-content--emoji .bubble--fourth { margin-bottom:-22rem; }
     
 }
 
@@ -1156,8 +1162,8 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
         margin-bottom:2rem;
     }
     .bubble--first::before {
-        bottom:-12rem;
-        right:-85rem;
+        bottom:-6rem;
+        right:-75rem;
     }
     .bubble--first::after {
         bottom:auto;
@@ -1166,8 +1172,8 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     }
     
     .bubble--second {
-        width:38rem;
-        height:38rem;
+        width:34rem;
+        height:34rem;
         margin-bottom:-20rem;
     }
     .bubble--third {
@@ -1229,12 +1235,7 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
         overflow:visible;
         float:none;
     }
-    
-    h1 { font-size:3.8rem; }
-    p { font-size:3rem; }
-    .bubble--first h1 { font-size:4.2rem; }
-    .bubble--first p { font-size:2.6rem; }
-    
+
     .page-content--emoji .bubble--third { margin-bottom:-8rem; }
     .page-content--emoji .bubble--fourth {
         margin-bottom:-40rem;
@@ -1247,5 +1248,16 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
 @media only screen and (min-width: 1350px) {
  
     .page-content--emoji .bubble--fourth { margin-left:-10rem; }
+
+    
+}
+
+/* 1400 px */
+@media only screen and (min-width: 1400px) {
+
+    h1 { font-size:3.8rem; }
+    p { font-size:3rem; }
+    .bubble--first h1 { font-size:4.2rem; }
+    .bubble--first p { font-size:2.6rem; }
     
 }

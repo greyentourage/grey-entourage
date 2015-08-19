@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <title>Emoji | Vipme.hr</title>
-    <meta name="description" content="">
+    <meta name="description" content="Misliš da si emoji ninja? Dokaži! Dekodiraj emojie, skupi najviše bodova i osvoji Zakon! nagradu. Prati top ljestvicu i pogledaj kako stojiš.">
     <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico"/>
 
     <!-- styles -->
@@ -18,13 +18,18 @@
     <script>window.jQuery || document.write('<script src="assets/scripts/jquery-1.11.2.min.js"><\/script>')</script>
     <script type="text/javascript">
         $(window).load(function() {
-            $('#preloader').delay(5000).fadeOut(600);
+            $('#preloader').delay(3000).fadeOut(400);
         })
     </script>
 </head>
 <body>
     
     
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#preloader').delay(5000).fadeOut(600);
+    })
+</script>
 <header role="banner" class="page-header">
     <div class="inner">
         <a href="index.html" class="logo"><img src="assets/img/logo-vip.svg" alt="" /></a>
@@ -75,13 +80,13 @@
             <span>Podijeli s prijateljima</span>
             <ul class="share__buttons">
                 <li>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=/newsfeed/share/" onclick="sendNewsShareGA('Facebook'); return !window.open(this.href, 'Share on Facebook', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-facebook.svg" alt="" /></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.vipme.hr/emoji" onclick="window.open(this.href, 'Podijeli na Facebooku', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-facebook.svg" alt="" /></a>
                 </li>
                 <li>
-                    <a href="http://twitter.com/home?status=%20%23Emoji%20www.vipme.hr%20via%20@VipEmoji" onclick="sendNewsShareGA('Twitter'); return !window.open(this.href, 'Share on Twitter', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-twitter.svg" alt="" /></a>
+                    <a href="http://twitter.com/home?status=Dekodiram%20emojie%20kao%20emoji%20ninja!%20Misliš%20da%20možeš%20bolje%20od%20mene?%20Dokaži:%20http://bit.ly/VipmeHR-emoji%20via%20@vipnetHRV" onclick="window.open(this.href, 'Podijeli na Twitteru', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-twitter.svg" alt="" /></a>
                 </li>
                 <li>
-                    <a href="https://plus.google.com/share?url=/newsfeed/share/"  onclick="sendNewsShareGA('Google+'); return !window.open(this.href, 'Share on Google+', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-google-plus.svg" alt="" /></a>
+                    <a href="https://plus.google.com/share?url=http://www.vipme.hr/emoji"  onclick="window.open(this.href, 'Podijeli na Google+', 'width=700,height=500')" target="_blank"><img src="assets/img/ico-google-plus.svg" alt="" /></a>
                 </li>
             </ul>
         </div>
@@ -90,9 +95,7 @@
 
     
 
-    <!-- TODO: Enable Google analytics -->
-    <!--
-    Google Analytics: change UA-XXXXX-X to be your site's ID. 
+    <!-- 
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
