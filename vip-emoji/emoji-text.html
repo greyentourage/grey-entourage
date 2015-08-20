@@ -10,22 +10,29 @@
     <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico"/>
 
     <!-- styles -->
-    <link href="assets/css/main.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="all"/>
 
     <!-- scripts -->
     <script src="assets/scripts/modernizr-2.8.3.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/scripts/jquery-1.11.2.min.js"><\/script>')</script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $('#preloader').delay(3000).fadeOut(400);
-        })
-    </script>
 </head>
 <body>
     
     
     
+<style>
+    .page-header,
+    .page-content,
+    .page-footer {
+        opacity:0;
+        transition:opacity 3s;
+    }
+    body.is-loaded .page-header,
+    body.is-loaded .page-content,
+    body.is-loaded .page-footer { opacity:1; }
+</style>
+
 <header role="banner" class="page-header">
     <div class="inner">
         <a href="index.html" class="logo"><img src="assets/img/logo-vip.svg" alt="" /></a>
@@ -40,20 +47,22 @@
         <p><strong>Što više bodova imaš, to ti je Zakon! nagrada bliža!</strong></p>
     </div>
 
-    <div class="bubble bubble--second">
-        <p><b>1.</b><br />Odgovori točno na pitanje u komentare<br /><strong>10 bodova</strong></p>
-    </div>
+    <div class="other-bubbles">
+        <div class="bubble bubble--second">
+            <p><b>1.</b><br />Odgovori točno na pitanje u komentare<br /><strong>10 bodova</strong></p>
+        </div>
 
-    <div class="bubble bubble--third">
-        <p><b>2.</b><br />Objavi fotku s točnim odgovorom na svome Instagram profilu, stavi <strong>#VipDecode</strong> i tagiraj @Vipme.hr na njoj<br /><strong>50 bodova</strong></p>
-    </div>
+        <div class="bubble bubble--third">
+            <p><b>2.</b><br />Objavi fotku s točnim odgovorom na svome Instagram profilu, stavi <strong>#VipDecode</strong> i tagiraj @Vipme.hr na njoj<br /><strong>50 bodova</strong></p>
+        </div>
 
-    <div class="bubble bubble--fourth">
-        <p><b>Misliš da ti super ide?</b><br />Pogledaj kako stojiš na top ljestvici u članku.<br /><a href="" class="btn btn--more">Pogledaj!</a></p>
-    </div>
+        <div class="bubble bubble--fourth">
+            <p><b>Misliš da ti super ide?</b><br />Pogledaj kako stojiš na top ljestvici u članku.<br /><a href="" class="btn btn--more">Pogledaj!</a></p>
+        </div>
 
-    <div class="bubble bubble--fifth">
-        <p>Prati nas na<br /><strong>Snapchatu vipme.hr</strong>,<br />jer ćemo ti svaki dan pomoći u dekodiranju!</p>
+        <div class="bubble bubble--fifth">
+            <p>Prati nas na<br /><strong>Snapchatu vipme.hr</strong>,<br />jer ćemo ti svaki dan pomoći u dekodiranju!</p>
+        </div>
     </div>
 </main>
 
@@ -81,8 +90,14 @@
     </div>
 </footer>
 
+<script type="text/javascript">
+    $(window).load(function() {
+        $('body').addClass("is-loaded");
+        $('#preloader').delay(3000).fadeOut(400);
+    })
+</script>
 <div id="preloader">
-    <div id="status">&nbsp;</div>
+    <div id="status"></div>
 </div>
 
 
