@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<style>
+    #preloader {
+    z-index:9999;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100vw;
+    height:100vh;
+    background-color:#ffb300;
+    -webkit-animation:preloader-color-change 3s alternate infinite;
+    animation:preloader-color-change 3s alternate infinite;
+}
+#status {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-6rem 0 0 -6rem;
+    width:12rem;
+    height:12rem;
+    background-image:url(../img/decode-loader.png);
+    -webkit-animation:preloader-images .7s steps(10) infinite;
+    animation:preloader-images .7s steps(10) infinite;
+}
+#status::before {
+    content:"";
+    z-index:-1;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-10rem 0 0 -10rem;
+    display:block;
+    width:20rem;
+    height:20rem;
+    background-color:#fff;
+    border-radius:100%;
+}
+
+
+@-webkit-keyframes preloader-images {
+    from { background-position:0; }
+    to { background-position:-1200px; }
+}
+@keyframes preloader-images {
+    from { background-position:0; }
+    to { background-position:-1200px; }
+}
+
+
+@-webkit-keyframes preloader-color-change {
+    0% { background-color:rgba(219,120,0,.9); }
+    25% { background-color:rgba(229,0,39,.95); }
+    50% { background-color:rgba(219,0,79,.92); }
+    75% { background-color:rgba(153,0,52,.97); }
+}
+@keyframes preloader-color-change {
+    0% { background-color:rgba(219,120,0,.9); }
+    25% { background-color:rgba(229,0,39,.95); }
+    50% { background-color:rgba(219,0,79,.92); }
+    75% { background-color:rgba(153,0,52,.97); }
+}
+    </style>
+</head>
+<body>
+  <div id="preloader">
+        <div id="status"></div>
+    </div>
+</body>
+</html>
