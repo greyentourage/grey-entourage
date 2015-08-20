@@ -210,7 +210,7 @@ body {
     padding-top:5rem;
     font:2rem/1.2 'FuturaBook', Helvetica, Arial, sans-serif;
     color:#fff;
-    background:#fff url(../img/body-bg.jpg) repeat 0 0;
+    background:#fff url(../img/body-bg.jpg) repeat 0 0 fixed;
     background-size:500px;
 }
 
@@ -355,7 +355,11 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
 
 
 /* ==================== content ==================== */
-.page-content { overflow:hidden; }
+.page-content {
+    overflow:hidden;
+    float:left;
+    width:100%;
+}
 .page-content::before,
 .page-content::after {
     content:"";
@@ -450,7 +454,10 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     height:16rem;
     margin-bottom:0;
 }
-.emoji-set2-1 { margin-top:2rem; }
+.emoji-set2-1 {
+    width:100%;
+    margin-top:2rem;
+}
 .emoji-set2-2 { width:10rem; }
 
 
@@ -497,6 +504,7 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
     width:16rem;
     margin-top:2rem;
 }
+.emoji-set3-2 { width:100%; }
 .emoji-set3-3 { width:13rem; }
 
 
@@ -1225,7 +1233,11 @@ b { font-family:'FuturaBold', Helvetica, Arial, sans-serif; }
 /* 1000 px */
 @media only screen and (min-width: 1000px) {
     
-    .page-content { overflow:visible; }
+    .page-content {
+        overflow:visible;
+        float:none;
+        width:auto;
+    }
     
     .btn--more { padding:1.5rem 3rem; }
     
