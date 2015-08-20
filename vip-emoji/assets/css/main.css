@@ -134,8 +134,26 @@ img { max-width:100%; }
     width:12rem;
     height:12rem;
     background-image:url(../img/decode-loader.png);
-    -webkit-animation:preloader-images .7s steps(10) infinite;
-    animation:preloader-images .7s steps(10) infinite;
+    -webkit-animation-name:preloader-images;
+    -webkit-animation-duration:.7s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:steps(10);
+    -moz-animation-name:preloader-images;
+    -moz-animation-duration:.7s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:steps(10);
+     -ms-animation-name:preloader-images;
+    -ms-animation-duration:.7s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-timing-function:steps(10);
+    -o-animation-name:preloader-images;
+    -o-animation-duration:.7s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-timing-function:steps(10);
+    animation-name:preloader-images;
+    animation-duration:.7s;
+    animation-iteration-count:infinite;
+    animation-timing-function:steps(10);
 }
 #status::before {
     content:"";
