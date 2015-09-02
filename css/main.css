@@ -805,7 +805,6 @@ p.highlighted,
     
     .content-right {
         position:relative;
-        top:-1.5rem;
         width:100%;
         min-height:0;
     }
